@@ -10,5 +10,9 @@
       "2": "Speaker",
       "3": "Philanthropist"
     }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "goBack": "Go back to the home page"
   }
 }

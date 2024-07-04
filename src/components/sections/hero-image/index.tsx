@@ -1,7 +1,7 @@
 import ImageCarousel from "@/components/ImageCarousel";
 import heroImage from "./hero.jpg";
 import Image from "next/image";
-import { useFormatter, useTranslations } from "next-intl";
+import { MessageKeys, useFormatter, useTranslations } from "next-intl";
 
 export function HeroImage() {
   const t = useTranslations("Hero");
@@ -28,7 +28,7 @@ export function HeroImage() {
             {["Entrepreneur", "Investor", "Speaker", "Philanthropist"].map((item, index) => (
               <div key={index} className="flex items-center gap-x-2">
                 <div className="w-[8px] h-[8px] bg-accent"></div>
-                <div>{t(`description.${index}`)}</div>
+                <div>{t(`description.${index}` as `description.${0 | 1 | 2 | 3}`)}</div>
               </div>
             ))}
           </div>
