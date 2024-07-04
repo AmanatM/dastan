@@ -22,15 +22,20 @@
     "title": "WAS BORN IN 1999 IN KYRGYZ REPUBLIC"
   },
   "Footer": {
-    "copyRight": "© 2024 Dastan Abikov. All rights reserved.",
     "rightsReserved": "All rights reserved."
   },
   "Navigation": {
-    "home": "Home",
-    "bio": "Biography",
-    "about": "About Dastan",
-    "speaking": "Speaking",
-    "news": "News & Publications",
-    "contact": "Contact"
+    "nav_items": {
+      "home": "Home",
+      "bio": "Biography",
+      "about": "About Dastan",
+      "speaking": "Speaking",
+      "news": "News & Publications",
+      "contact": "Contact"
+    },
+    "meta": {
+      "title": "Menu",
+      "description": "Navigation Menu"
+    }
   }
 }

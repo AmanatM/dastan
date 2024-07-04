@@ -2,7 +2,15 @@
 import { cn } from "@/lib/utils"
 import { Menu } from "lucide-react"
 import { Button, buttonVariants } from "@/components/ui/button"
-import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 import { useState } from "react"
 import Link from "next/link"
 import { mainNav } from "@/config/navigation-links"
@@ -20,6 +28,7 @@ export function MobileMenu() {
   }
 
   const t = useTranslations("Navigation")
+  const navigationItems = useTranslations("Navigation.nav_items")
 
   return (
     <Sheet open={navOpened} onOpenChange={toggleNav}>
@@ -40,6 +49,10 @@ export function MobileMenu() {
         className="flex w-full !max-w-full flex-col justify-start md:w-[500px]"
         id="main-menu"
       >
+        <SheetHeader className="hidden">
+          <SheetTitle>{t("meta.title")}</SheetTitle>
+          <SheetDescription>{t("meta.description")}</SheetDescription>
+        </SheetHeader>
         <div className="container mx-auto flex w-full items-center justify-between px-4">
           <Link href={"/"} className="mr-5 flex w-[130px] items-center md:w-auto">
             <LogoIcon />
@@ -58,7 +71,7 @@ export function MobileMenu() {
         <div className="flex flex-row flex-wrap space-y-4 pt-4">
           {mainNav.map((link, index) => (
             <Link key={index} href={link.href} onClick={toggleNav} className={"w-full justify-start px-2"}>
-              {t(link.titleKey as "home" | "bio" | "about" | "speaking" | "news" | "contact")}
+              {navigationItems(link.titleKey as "home" | "bio" | "about" | "speaking" | "news" | "contact")}
             </Link>
           ))}
         </div>

@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl"
 
 export function Footer() {
   const t = useTranslations()
-  const navigation = useTranslations("Navigation")
+  const navigationItems = useTranslations("Navigation.nav_items")
 
   return (
     <footer className="border-t border-border py-16 text-muted-foreground">
@@ -22,7 +22,7 @@ export function Footer() {
               className="text-text-tertiary hover:text-text-primary dark:text-dark-text-secondary dark:hover:text-dark-text-primary px-2 font-light tracking-tight"
               href={link.href ?? "#"}
             >
-              {navigation(link.titleKey as "home" | "bio" | "about" | "speaking" | "news" | "contact")}
+              {navigationItems(link.titleKey as "home" | "bio" | "about" | "speaking" | "news" | "contact")}
             </Link>
           ))}
         </nav>
