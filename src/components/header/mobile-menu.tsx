@@ -35,20 +35,24 @@ export function MobileMenu() {
           <HamburgerMenuIcon className={"h-[20px] w-[20px]"} />
         </Button>
       </SheetTrigger>
-      <SheetContent className="flex w-full !max-w-full flex-col justify-start md:w-[500px]" id="main-menu">
-        <div className="container mx-auto flex w-full items-center justify-between px-6">
+      <SheetContent
+        removeCloseIcon
+        className="flex w-full !max-w-full flex-col justify-start md:w-[500px]"
+        id="main-menu"
+      >
+        <div className="container mx-auto flex w-full items-center justify-between px-4">
           <Link href={"/"} className="mr-5 flex w-[130px] items-center md:w-auto">
             <LogoIcon />
           </Link>
 
           <div className="flex items-center gap-x-8">
             <LocaleSelector />
+            <SheetClose asChild>
+              <Button size={"icon"} className="hover:bg-transparent" variant="ghost">
+                <Cross1Icon className={"h-[20px] w-[20px]"} />
+              </Button>
+            </SheetClose>
           </div>
-          <SheetClose asChild>
-            <Button size={"icon"} className="hover:bg-transparent" variant="ghost">
-              <Cross1Icon />
-            </Button>
-          </SheetClose>
         </div>
         <Separator />
         <div className="flex flex-row flex-wrap space-y-4 pt-4">
