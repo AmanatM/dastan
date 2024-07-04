@@ -25,10 +25,10 @@ export function MobileMenu() {
           aria-expanded={navOpened}
           aria-label="Toggle main menu"
         >
-          <Menu size={20} />
+          <Menu size={25} />
         </Button>
       </SheetTrigger>
-      <SheetContent className="flex flex-col justify-between " id="main-menu">
+      <SheetContent className="flex flex-col justify-between" id="main-menu">
         <div className="flex flex-row flex-wrap pt-4 space-y-2">
           <SheetTitle>Menu</SheetTitle>
 
