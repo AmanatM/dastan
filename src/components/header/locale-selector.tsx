@@ -13,15 +13,15 @@ type Language = {
 
 const languages: Record<string, Language> = {
   en: {
-    name: "English",
+    name: "EN",
     icon: <USFlagIcon />,
   },
   ru: {
-    name: "Русский",
+    name: "RU",
     icon: <RUFlagIcon />,
   },
-  kg: {
-    name: "Кыргызча",
+  ky: {
+    name: "KG",
     icon: <KGFlagIcon />,
   },
 };
@@ -51,7 +51,7 @@ function LocaleSelector() {
       <SelectTrigger className="border-none outline-none bg-transparent uppercase">
         <SelectValue>
           <div className="flex items-center gap-x-2">
-            {languages[value].icon} {value}
+            {languages[value].icon} {languages[value].name}
           </div>
         </SelectValue>
       </SelectTrigger>
@@ -60,7 +60,7 @@ function LocaleSelector() {
           {locales.map((locale) => (
             <SelectItem value={locale} key={locale} className="uppercase cursor-pointer">
               <div className="flex items-center gap-x-2">
-                {languages[locale].icon} {locale}
+                {languages[locale].icon} {languages[locale].name}
               </div>
             </SelectItem>
           ))}
