@@ -4,14 +4,10 @@ import heroImage from "./hero.jpg"
 import Image from "next/image"
 import { MessageKeys, useFormatter, useTranslations } from "next-intl"
 import { motion } from "framer-motion"
+import { FADE_UP_ANIMATION_VARIANTS } from "@/config/motion-animations"
 
 export function HeroImage() {
   const t = useTranslations()
-
-  const FADE_UP_ANIMATION_VARIANTS = {
-    hidden: { opacity: 0, y: 10 },
-    show: { opacity: 1, y: 0, transition: { type: "spring" } },
-  }
 
   return (
     <section className="relative h-screen overflow-hidden">

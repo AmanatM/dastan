@@ -1,6 +1,10 @@
-import { Slot } from "@radix-ui/react-slot";
-import { type VariantProps, cva } from "class-variance-authority";
-import clsx from "clsx";
+"use client"
+import { FADE_UP_ANIMATION_VARIANTS } from "@/config/motion-animations"
+import { Slot } from "@radix-ui/react-slot"
+import { type VariantProps, cva } from "class-variance-authority"
+import clsx from "clsx"
+import { motion, useInView } from "framer-motion"
+import { useRef } from "react"
 
 const $headingContainer = cva("flex flex-col gap-3", {
   variants: {
@@ -14,55 +18,73 @@ const $headingContainer = cva("flex flex-col gap-3", {
   defaultVariants: {
     align: "center",
   },
-});
+})
 
 export type HeadingProps = {
-  children: React.ReactNode;
-  tag?: React.ReactNode;
-  subtitle?: React.ReactNode;
-  className?: string;
-  title?: string;
-  align?: string | null;
-} & VariantProps<typeof $headingContainer>;
+  children: React.ReactNode
+  subtitle?: React.ReactNode
+  className?: string
+  title?: string
+  align?: string | null
+} & VariantProps<typeof $headingContainer>
 
-export function Heading({ tag, subtitle, className, align = "center", ...props }: HeadingProps) {
-  align = align ?? "center";
-  const Comp = Slot;
+export function Heading({ subtitle, className, align = "center", ...props }: HeadingProps) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
 
-  if (align === "none") return null;
+  align = align ?? "center"
+  const Comp = Slot
+
+  if (align === "none") return null
 
   return (
-    <div className={$headingContainer({ align, className })}>
-      {tag ? <Tag>{tag}</Tag> : null}
-      {subtitle ? (
-        <p
-          className={clsx("max-w-screen-md text-pretty text-lg font-light text-muted-foreground md:text-xl", {
-            "text-center": align === "center",
-            "text-left": align === "left",
-            "text-right": align === "right",
-          })}
-        >
-          {subtitle}
-        </p>
-      ) : null}
-      <div
-        className={clsx("flex max-w-[800px] flex-col justify-center gap-1", {
-          "items-start self-start": align === "left",
-          "items-center self-center": align === "center" || !align,
-          "items-end self-end": align === "right",
-        })}
+    <div ref={ref}>
+      <motion.div
+        className={$headingContainer({ align, className })}
+        initial="hidden"
+        animate={isInView ? "show" : "hidden"}
+        viewport={{ root: ref }}
+        variants={{
+          hidden: {},
+          show: {
+            transition: {
+              staggerChildren: 0.15,
+            },
+          },
+        }}
       >
-        <Comp
-          className={clsx("text-pretty text-3xl font-medium md:text-4xl", {
-            "text-center": align === "center",
-            "text-left": align === "left",
-            "text-right": align === "right",
+        {subtitle && (
+          <motion.p
+            className={clsx("max-w-screen-md text-pretty text-lg font-light text-muted-foreground md:text-xl", {
+              "text-center": align === "center",
+              "text-left": align === "left",
+              "text-right": align === "right",
+            })}
+            variants={FADE_UP_ANIMATION_VARIANTS}
+          >
+            {subtitle}
+          </motion.p>
+        )}
+        <motion.div
+          className={clsx("flex max-w-[800px] flex-col justify-center gap-1", {
+            "items-start self-start": align === "left",
+            "items-center self-center": align === "center" || !align,
+            "items-end self-end": align === "right",
           })}
-          {...props}
-        />
-      </div>
+          variants={FADE_UP_ANIMATION_VARIANTS}
+        >
+          <Comp
+            className={clsx("text-pretty text-3xl font-medium md:text-4xl", {
+              "text-center": align === "center",
+              "text-left": align === "left",
+              "text-right": align === "right",
+            })}
+            {...props}
+          />
+        </motion.div>
+      </motion.div>
     </div>
-  );
+  )
 }
 
 export function Tag({
@@ -71,17 +93,17 @@ export function Tag({
   asChild,
   ...props
 }: React.AllHTMLAttributes<HTMLDivElement> & { asChild?: boolean }) {
-  const Comp = asChild ? Slot : "h3";
+  const Comp = asChild ? Slot : "h3"
 
   return (
     <Comp
       className={clsx(
-        "flex min-h-7 items-center justify-center gap-2 rounded-full bg-muted text-muted-foreground px-3.5 pb-px text-sm font-medium  md:text-base",
-        className
+        "flex min-h-7 items-center justify-center gap-2 rounded-full bg-muted px-3.5 pb-px text-sm font-medium text-muted-foreground md:text-base",
+        className,
       )}
       {...props}
     >
       {children}
     </Comp>
-  );
+  )
 }

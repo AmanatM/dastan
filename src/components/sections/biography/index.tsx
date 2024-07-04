@@ -1,4 +1,3 @@
-"use client"
 import { Heading } from "@/components/common/heading"
 import { Section } from "@/components/common/layout"
 import ImageCarousel from "@/components/ImageCarousel"
@@ -8,7 +7,6 @@ import Image from "next/image"
 import slider1 from "./images/childhood.jpg"
 import slider2 from "./images/certificate.jpg"
 import { useTranslations } from "next-intl"
-import { AnimatePresence, motion } from "framer-motion"
 
 function Biography() {
   const t = useTranslations()
@@ -30,10 +28,10 @@ function Biography() {
 
       <div className="flex flex-col gap-y-7">
         <Heading subtitle={t("Biography.subtitle")} align={"left"}>
-          <motion.h4>
+          <h4>
             <span className="uppercase text-accent">{t("Global.name")}</span>
             <br /> {t("Biography.title")}
-          </motion.h4>
+          </h4>
         </Heading>
         <div className="flex flex-col gap-y-3">
           {["Entrepreneur", "Investor", "Speaker", "Philanthropist"].map((item, index) => (
