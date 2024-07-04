@@ -1,8 +1,8 @@
 "use client"
-import { AnimatePresence, motion } from "framer-motion"
-import { useLocale } from "next-intl"
-import { LayoutRouterContext } from "next/dist/shared/lib/app-router-context.shared-runtime"
+
+import { motion, AnimatePresence } from "framer-motion"
 import { usePathname } from "next/navigation"
+import { LayoutRouterContext } from "next/dist/shared/lib/app-router-context.shared-runtime"
 import { useContext, useRef } from "react"
 
 function FrozenRouter(props: { children: React.ReactNode }) {
@@ -16,16 +16,24 @@ function FrozenRouter(props: { children: React.ReactNode }) {
   return <LayoutRouterContext.Provider value={frozen}>{props.children}</LayoutRouterContext.Provider>
 }
 
-export default function Transition({ children }: { children: React.ReactNode }) {
+const variants = {
+  hidden: { opacity: 0 },
+  enter: { opacity: 1 },
+  exit: { opacity: 0 },
+}
+
+const PageTransitionEffect = ({ children }: { children: React.ReactNode }) => {
+  // The `key` is tied to the url using the `usePathname` hook.
   const key = usePathname()
+
   return (
     <AnimatePresence mode="popLayout">
       <motion.div
         key={key}
-        viewport={{ once: true }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+        initial="hidden"
+        animate="enter"
+        exit="exit"
+        variants={variants}
         transition={{ ease: "easeInOut", duration: 0.3 }}
       >
         <FrozenRouter>{children}</FrozenRouter>
@@ -33,3 +41,5 @@ export default function Transition({ children }: { children: React.ReactNode }) 
     </AnimatePresence>
   )
 }
+
+export default PageTransitionEffect

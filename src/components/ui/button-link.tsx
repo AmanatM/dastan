@@ -1,7 +1,7 @@
-import { cn } from "@/lib/utils";
-import { ButtonProps, buttonVariants } from "./button";
-import Link, { LinkProps } from "next/link";
-import * as React from "react";
+import { cn } from "@/lib/utils"
+import { ButtonProps, buttonVariants } from "./button"
+import Link, { LinkProps } from "next/link"
+import * as React from "react"
 
 export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonProps & LinkProps>(
   ({ variant, size, children, className, href, ...props }, ref) => {
@@ -9,8 +9,8 @@ export const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonProps & Link
       <Link href={href} className={cn(buttonVariants({ variant, size }), className)} ref={ref}>
         {children}
       </Link>
-    );
-  }
-);
+    )
+  },
+)
 
-ButtonLink.displayName = "ButtonLink";
+ButtonLink.displayName = "ButtonLink"
