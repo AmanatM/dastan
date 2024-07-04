@@ -1,5 +1,6 @@
 import { ThemeSwitcher } from "../theme-switcher";
-import Link from "next/link";
+import { Link } from "@/navigation";
+
 import { LogoIcon } from "@/icons/logo-icons";
 import { mainNav } from "@/config/navigation-links";
 

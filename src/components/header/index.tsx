@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/navigation";
 
 import { MobileMenu } from "./mobile-menu";
 import { LogoIcon } from "@/icons/logo-icons";

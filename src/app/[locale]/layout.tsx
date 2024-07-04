@@ -5,23 +5,32 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { unstable_setRequestLocale } from "next-intl/server";
 
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { localesConfig } from "@/i18n";
+import { locales } from "@/config";
+import { ReactNode } from "react";
 
-export const metadata: Metadata = {
-  title: "Dastan Abikov",
-  description: "Dastan Abikov",
-  icons: {
-    icon: "/favicon.svg",
-  },
+type Props = {
+  children: ReactNode;
+  params: { locale: string };
 };
 
+export async function generateMetadata({ params: { locale } }: Omit<Props, "children">) {
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  return {
+    title: t("title"),
+    icons: {
+      icon: "/favicon.svg",
+    },
+  };
+}
+
 export function generateStaticParams() {
-  return localesConfig.map((locale) => ({ locale }));
+  return locales.map((locale) => ({ locale }));
 }
 
 export default async function RootLayout({
