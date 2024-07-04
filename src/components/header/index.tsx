@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { MobileMenu } from "./mobile-menu";
-import { LogoIcon } from "@/app/icons/logo-icons";
+import { LogoIcon } from "@/icons/logo-icons";
 import SocialIcons from "./social-icons";
 import LocaleSelector from "./locale-selector";
 

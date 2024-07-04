@@ -1,8 +1,10 @@
 import ImageCarousel from "@/components/ImageCarousel";
 import heroImage from "./hero.jpg";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export function HeroImage() {
+  const t = useTranslations("Hero");
   return (
     <section className="relative h-screen overflow-hidden">
       <div className="flex flex-col md:flex-row size-full">
@@ -32,7 +34,7 @@ export function HeroImage() {
         </div>
       </div>
       <h1 className="absolute bottom-0 left-0 right-0 font-bold text-[12vw] text-center text-nowrap max-w-full hidden md:block">
-        DASTAN ABIKOV
+        {t("Name")}
       </h1>
     </section>
   );
