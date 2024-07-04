@@ -19,7 +19,7 @@ export function MobileMenu() {
       <SheetTrigger asChild>
         <Button
           size={"icon"}
-          className=""
+          className="hover:bg-transparent"
           variant="ghost"
           aria-controls="main-menu"
           aria-expanded={navOpened}
