@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html suppressHydrationWarning lang="en" className={`${GeistSans.variable} ${GeistMono.variable} scroll-smooth`}>
       <body className={`min-h-svh max-w-[100vw] font-sans`}>
         <Header />
         <main className="min-h-[calc(100svh-var(--header-height))]">{children}</main>

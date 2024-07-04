@@ -1,7 +1,7 @@
 import { ThemeSwitcher } from "../theme-switcher";
 import Link from "next/link";
 import { LogoIcon } from "@/app/icons/logo-icons";
-import { mainNav } from "@/config/main-nav";
+import { mainNav } from "@/config/navigation-links";
 
 export async function Footer() {
   return (

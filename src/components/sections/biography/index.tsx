@@ -9,7 +9,7 @@ import slider2 from "./images/certificate.jpg";
 
 function Biography() {
   return (
-    <Section container={"default"} className="grid md:grid-cols-2 gap-x-20 w-full items-center">
+    <Section container={"default"} className="grid md:grid-cols-2 gap-x-20 w-full items-center" id="biography">
       <ImageCarousel
         className="h-[500px]"
         images={[
