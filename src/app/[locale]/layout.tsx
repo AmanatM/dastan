@@ -11,6 +11,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { locales } from "@/config"
 import { ReactNode } from "react"
+import Transition from "@/components/Transition"
 
 type Props = {
   children: ReactNode
@@ -44,7 +45,9 @@ export default async function RootLayout({
       <body className={`min-h-svh max-w-[100vw] font-sans`}>
         <NextIntlClientProvider messages={messages}>
           <Header />
-          <main className="min-h-[calc(100svh-var(--header-height))]">{children}</main>
+          <Transition>
+            <main className="min-h-[calc(100svh-var(--header-height))]">{children}</main>
+          </Transition>
           <Footer />
         </NextIntlClientProvider>
       </body>
