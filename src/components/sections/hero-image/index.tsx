@@ -5,13 +5,26 @@ import { Button } from "../../ui/button";
 import { cn } from "@/lib/utils";
 import { ButtonLink } from "@/components/ui/button-link";
 import Image from "next/image";
+import ImageCarousel from "@/components/ImageCarousel";
 
 export function HeroImage() {
   return (
     <section className="relative h-screen overflow-hidden">
       <div className="flex flex-col lg:flex-row size-full">
         <div className="h-3/6 lg:h-auto lg:w-4/6 relative">
-          <Image quality={80} src="/images/hero.jpg" fill={true} objectFit="cover" alt="" />
+          <ImageCarousel
+            images={[
+              {
+                src: "/images/hero.jpg",
+                alt: "",
+              },
+              {
+                src: "/images/hero.jpg",
+                alt: "",
+              },
+            ]}
+            className=""
+          />
         </div>
         <div className="h-3/6 lg:h-auto lg:w-2/6 flex items-center justify-start lg:p-20 p-4">
           <div className="flex flex-col items-start justify-center gap-x-2 gap-y-4">

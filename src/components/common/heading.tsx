@@ -34,6 +34,17 @@ export function Heading({ tag, subtitle, className, align = "center", ...props }
   return (
     <div className={$headingContainer({ align, className })}>
       {tag ? <Tag>{tag}</Tag> : null}
+      {subtitle ? (
+        <p
+          className={clsx("max-w-screen-md text-pretty text-lg font-light text-muted-foreground md:text-xl", {
+            "text-center": align === "center",
+            "text-left": align === "left",
+            "text-right": align === "right",
+          })}
+        >
+          {subtitle}
+        </p>
+      ) : null}
       <div
         className={clsx("flex max-w-[800px] flex-col justify-center gap-1", {
           "items-start self-start": align === "left",
@@ -50,17 +61,6 @@ export function Heading({ tag, subtitle, className, align = "center", ...props }
           {...props}
         />
       </div>
-      {subtitle ? (
-        <p
-          className={clsx("max-w-screen-md text-pretty text-lg font-light text-muted-foreground md:text-xl", {
-            "text-center": align === "center",
-            "text-left": align === "left",
-            "text-right": align === "right",
-          })}
-        >
-          {subtitle}
-        </p>
-      ) : null}
     </div>
   );
 }
