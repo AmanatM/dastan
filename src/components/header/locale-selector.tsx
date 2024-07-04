@@ -41,7 +41,7 @@ function LocaleSelector() {
   function onSelectChange(nextLocale: string) {
     startTransition(() => {
       const urlSegments = pathname.split("/").filter((segment) => segment !== currentLocale);
-      router.replace(`/${nextLocale}/${urlSegments.join("/")}`);
+      router.replace(`/${nextLocale}/${urlSegments.join("/")}`, { scroll: false });
       setValue(nextLocale);
     });
   }
