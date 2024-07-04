@@ -1,32 +1,25 @@
-import clsx from "clsx";
-
-import { Avatar } from "../../ui/avatar";
-import { Button } from "../../ui/button";
-import { cn } from "@/lib/utils";
-import { ButtonLink } from "@/components/ui/button-link";
-import Image from "next/image";
 import ImageCarousel from "@/components/ImageCarousel";
+import heroImage from "./hero.jpg";
 
 export function HeroImage() {
   return (
     <section className="relative h-screen overflow-hidden">
       <div className="flex flex-col lg:flex-row size-full">
-        <div className="h-3/6 lg:h-auto lg:w-4/6 relative">
+        <div className=" lg:h-auto lg:w-4/6 relative">
           <ImageCarousel
             images={[
               {
-                src: "/images/hero.jpg",
+                img: heroImage,
                 alt: "",
               },
               {
-                src: "/images/hero.jpg",
+                img: heroImage,
                 alt: "",
               },
             ]}
-            className=""
           />
         </div>
-        <div className="h-3/6 lg:h-auto lg:w-2/6 flex items-center justify-start lg:p-20 p-4">
+        <div className=" lg:h-auto lg:w-2/6 flex items-center justify-start lg:p-20 p-4">
           <div className="flex flex-col items-start justify-center gap-x-2 gap-y-4">
             <h1 className="flex lg:hidden font-bold text-3xl">DASTAN ABIKOV</h1>
             {["Entrepreneur", "Investor", "Speaker", "Philanthropist"].map((item, index) => (

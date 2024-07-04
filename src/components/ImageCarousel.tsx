@@ -2,12 +2,12 @@
 import React from "react";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { cn } from "@/lib/utils";
 
 type ImageCarouselProps = {
   images: {
-    src: string;
+    img: StaticImageData;
     alt: string;
   }[];
   delay?: number;
@@ -15,25 +15,24 @@ type ImageCarouselProps = {
 };
 
 function ImageCarousel({ images, delay = 10000, className }: ImageCarouselProps) {
+  const plugin = React.useRef(Autoplay({ delay: delay, stopOnInteraction: true }));
+
   return (
     <Carousel
       opts={{
         loop: true,
+        duration: 500,
       }}
-      plugins={[
-        Autoplay({
-          delay: delay,
-        }),
-      ]}
-      className={cn("size-full", className)}
+      plugins={[plugin.current]}
+      className={cn("", className)}
     >
-      <CarouselContent className="h-[400px]">
+      <CarouselContent className="relative">
         {images.map((image, index) => (
-          <CarouselItem key={index} className="relative size-full">
+          <CarouselItem key={index} className=" aspect-square w-full">
             <Image
-              src={image.src}
+              src={image.img}
               alt={image.alt}
-              fill={true}
+              fill
               style={{
                 objectFit: "cover",
               }}
