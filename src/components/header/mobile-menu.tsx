@@ -29,6 +29,7 @@ export function MobileMenu() {
 
   const t = useTranslations("Navigation")
   const navigationItems = useTranslations("Navigation.nav_items")
+  const navMeta = useTranslations("Navigation.meta")
 
   return (
     <Sheet open={navOpened} onOpenChange={toggleNav}>
@@ -50,8 +51,8 @@ export function MobileMenu() {
         id="main-menu"
       >
         <SheetHeader className="hidden">
-          <SheetTitle>{t("meta.title")}</SheetTitle>
-          <SheetDescription>{t("meta.description")}</SheetDescription>
+          <SheetTitle>{navMeta("title")}</SheetTitle>
+          <SheetDescription>{navMeta("description")}</SheetDescription>
         </SheetHeader>
         <div className="container mx-auto flex w-full items-center justify-between px-4">
           <Link href={"/"} className="mr-5 flex w-[130px] items-center md:w-auto">
