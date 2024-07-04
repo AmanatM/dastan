@@ -24,7 +24,7 @@ export function HeroImage() {
         </div>
         <div className="h-1/3 md:h-auto md:w-2/6 flex items-center justify-start md:p-20 p-4">
           <div className="flex flex-col items-start justify-center gap-x-2 gap-y-4">
-            <h1 className="flex md:hidden font-bold text-3xl">DASTAN ABIKOV</h1>
+            <h1 className="flex md:hidden font-bold text-3xl">{t("name")}</h1>
             {["Entrepreneur", "Investor", "Speaker", "Philanthropist"].map((item, index) => (
               <div key={index} className="flex items-center gap-x-2">
                 <div className="w-[8px] h-[8px] bg-accent"></div>
