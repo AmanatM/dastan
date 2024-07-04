@@ -9,7 +9,7 @@ import slider2 from "./images/certificate.jpg";
 
 function Biography() {
   return (
-    <Section container={"default"} className="grid lg:grid-cols-2 gap-x-20 w-full items-center">
+    <Section container={"default"} className="grid md:grid-cols-2 gap-x-20 w-full items-center">
       <ImageCarousel
         className="h-[500px]"
         images={[
@@ -23,17 +23,6 @@ function Biography() {
           },
         ]}
       />
-      {/* <Image
-          src={bioImage}
-          alt="Dastan Abikov"
-          placeholder="blur"
-          fill
-          style={{
-            objectFit: "cover",
-            height: "100%",
-            width: "100%",
-          }}
-        /> */}
 
       <div className="flex flex-col gap-y-7">
         <Heading subtitle={"BIOGRAPHY"} align={"left"}>

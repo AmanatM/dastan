@@ -14,7 +14,7 @@ type ImageCarouselProps = {
   className?: string;
 };
 
-function ImageCarousel({ images, delay = 2000, className }: ImageCarouselProps) {
+function ImageCarousel({ images, delay = 3000, className }: ImageCarouselProps) {
   return (
     <Carousel
       opts={{
