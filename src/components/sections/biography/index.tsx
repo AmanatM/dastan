@@ -4,8 +4,8 @@ import ImageCarousel from "@/components/ImageCarousel";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-import bioImage from "./childhood.jpg";
-import heroImage from "./hero.jpg";
+import slider1 from "./images/childhood.jpg";
+import slider2 from "./images/certificate.jpg";
 
 function Biography() {
   return (
@@ -14,11 +14,11 @@ function Biography() {
         className="h-[500px]"
         images={[
           {
-            img: heroImage,
+            img: slider1,
             alt: "",
           },
           {
-            img: bioImage,
+            img: slider2,
             alt: "",
           },
         ]}
