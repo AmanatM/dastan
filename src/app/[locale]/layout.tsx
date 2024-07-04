@@ -18,10 +18,10 @@ type Props = {
 }
 
 export async function generateMetadata({ params: { locale } }: Omit<Props, "children">) {
-  const t = await getTranslations()
+  const t = await getTranslations({ locale, namespace: "Global" })
 
   return {
-    title: t("Global.name"),
+    title: t("name"),
   }
 }
 
@@ -40,13 +40,9 @@ export default async function RootLayout({
   const messages = await getMessages()
 
   return (
-    <html
-      suppressHydrationWarning
-      className={`${GeistSans.variable} ${GeistMono.variable} scroll-smooth`}
-      lang={locale}
-    >
+    <html className={`${GeistSans.variable} ${GeistMono.variable} scroll-smooth`} lang={locale}>
       <body className={`min-h-svh max-w-[100vw] font-sans`}>
-        <NextIntlClientProvider messages={messages} locale={locale}>
+        <NextIntlClientProvider messages={messages}>
           <Header />
           <main className="min-h-[calc(100svh-var(--header-height))]">{children}</main>
           <Footer />
