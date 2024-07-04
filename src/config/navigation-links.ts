@@ -1,27 +1,27 @@
 type MainNav = {
-  title: string;
-  href: string;
-};
+  titleKey: string
+  href: string
+}
 
 export const mainNav: MainNav[] = [
   {
-    title: "Biography",
+    titleKey: "bio",
     href: "#biography",
   },
   {
-    title: "About Dastan",
+    titleKey: "about",
     href: "#about",
   },
   {
-    title: "Speaking",
+    titleKey: "speaking",
     href: "#speaking",
   },
   {
-    title: "News & Publications",
+    titleKey: "news",
     href: "#news",
   },
   {
-    title: "Contact",
+    titleKey: "contact",
     href: "#contact",
   },
-];
+]

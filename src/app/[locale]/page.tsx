@@ -1,12 +1,11 @@
-import { Companies } from "@/components/sections/companies";
-import { HeroImage } from "@/components/sections/hero-image";
+import { Companies } from "@/components/sections/companies"
+import { HeroImage } from "@/components/sections/hero-image"
 
-import Biography from "@/components/sections/biography";
-import { unstable_setRequestLocale } from "next-intl/server";
-import { Link } from "@/navigation";
+import Biography from "@/components/sections/biography"
+import { unstable_setRequestLocale } from "next-intl/server"
 
 export default function Home({ params: { locale } }: { params: { locale: string } }) {
-  unstable_setRequestLocale(locale);
+  unstable_setRequestLocale(locale)
   return (
     <div>
       <HeroImage />
@@ -34,5 +33,5 @@ export default function Home({ params: { locale } }: { params: { locale: string 
       />
       <Newsletter /> */}
     </div>
-  );
+  )
 }

@@ -23,5 +23,13 @@
   },
   "Footer": {
     "rightsReserved": "Все права защищены."
+  },
+  "Navigation": {
+    "about": "О Дастане",
+    "bio": "Биография",
+    "contact": "Контакт",
+    "home": "Главная",
+    "news": "Новости",
+    "speaking": "Спикер"
   }
 }

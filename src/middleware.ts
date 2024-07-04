@@ -1,10 +1,11 @@
-import createMiddleware from "next-intl/middleware";
-import { localePrefix, defaultLocale, locales, pathnames } from "./config";
+import createMiddleware from "next-intl/middleware"
+import { localePrefix, defaultLocale, locales, pathnames } from "./config"
 
 export default createMiddleware({
   defaultLocale,
   locales,
-});
+  localePrefix,
+})
 
 export const config = {
   matcher: [
@@ -19,4 +20,4 @@ export const config = {
     // (e.g. `/pathnames` -> `/en/pathnames`)
     "/((?!_next|_vercel|.*\\..*).*)",
   ],
-};
+}

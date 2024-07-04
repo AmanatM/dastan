@@ -1,22 +1,25 @@
-"use client";
-import { cn } from "@/lib/utils";
-import { Menu } from "lucide-react";
-import { Button, buttonVariants } from "@/components/ui/button";
-import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { useState } from "react";
-import Link from "next/link";
-import { mainNav } from "@/config/navigation-links";
-import { LogoIcon } from "@/icons/logo-icons";
-import LocaleSelector from "./locale-selector";
-import { Separator } from "../ui/separator";
-import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
+"use client"
+import { cn } from "@/lib/utils"
+import { Menu } from "lucide-react"
+import { Button, buttonVariants } from "@/components/ui/button"
+import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import { useState } from "react"
+import Link from "next/link"
+import { mainNav } from "@/config/navigation-links"
+import { LogoIcon } from "@/icons/logo-icons"
+import LocaleSelector from "./locale-selector"
+import { Separator } from "../ui/separator"
+import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons"
+import { useTranslations } from "next-intl"
 
 export function MobileMenu() {
-  const [navOpened, setNavOpened] = useState(false);
+  const [navOpened, setNavOpened] = useState(false)
 
   const toggleNav = () => {
-    setNavOpened((prev) => !prev);
-  };
+    setNavOpened(prev => !prev)
+  }
+
+  const t = useTranslations("Navigation")
 
   return (
     <Sheet open={navOpened} onOpenChange={toggleNav}>
@@ -29,12 +32,12 @@ export function MobileMenu() {
           aria-expanded={navOpened}
           aria-label="Toggle main menu"
         >
-          <HamburgerMenuIcon className={"w-[20px] h-[20px]"} />
+          <HamburgerMenuIcon className={"h-[20px] w-[20px]"} />
         </Button>
       </SheetTrigger>
-      <SheetContent className="flex flex-col justify-start !max-w-full w-full md:w-[500px]" id="main-menu">
-        <div className="container mx-auto flex justify-between items-center w-full px-6">
-          <Link href={"/"} className="mr-5 flex items-center w-[130px] md:w-auto">
+      <SheetContent className="flex w-full !max-w-full flex-col justify-start md:w-[500px]" id="main-menu">
+        <div className="container mx-auto flex w-full items-center justify-between px-6">
+          <Link href={"/"} className="mr-5 flex w-[130px] items-center md:w-auto">
             <LogoIcon />
           </Link>
 
@@ -48,14 +51,14 @@ export function MobileMenu() {
           </SheetClose>
         </div>
         <Separator />
-        <div className="flex flex-row flex-wrap pt-4 space-y-2">
+        <div className="flex flex-row flex-wrap space-y-2 pt-4">
           {mainNav.map((link, index) => (
             <Link key={index} href={link.href} onClick={toggleNav} className={"w-full justify-start px-2"}>
-              {link.title}
+              {t(link.titleKey as "home" | "bio" | "about" | "speaking" | "news" | "contact")}
             </Link>
           ))}
         </div>
       </SheetContent>
     </Sheet>
-  );
+  )
 }
