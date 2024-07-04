@@ -1,12 +1,13 @@
 import ImageCarousel from "@/components/ImageCarousel";
 import heroImage from "./hero.jpg";
+import Image from "next/image";
 
 export function HeroImage() {
   return (
     <section className="relative h-screen overflow-hidden">
       <div className="flex flex-col lg:flex-row size-full">
         <div className=" lg:h-auto lg:w-4/6 relative">
-          <ImageCarousel
+          {/* <ImageCarousel
             images={[
               {
                 img: heroImage,
@@ -17,6 +18,17 @@ export function HeroImage() {
                 alt: "",
               },
             ]}
+          /> */}
+          <Image
+            src={heroImage}
+            alt="Dastan Abikov"
+            placeholder="blur"
+            fill
+            style={{
+              objectFit: "cover",
+              height: "100%",
+              width: "100%",
+            }}
           />
         </div>
         <div className=" lg:h-auto lg:w-2/6 flex items-center justify-start lg:p-20 p-4">

@@ -2,26 +2,39 @@ import { Heading } from "@/components/common/heading";
 import { Section } from "@/components/common/layout";
 import ImageCarousel from "@/components/ImageCarousel";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 import bioImage from "./childhood.jpg";
+import heroImage from "./hero.jpg";
 
 function Biography() {
   return (
     <Section container={"default"} className="grid lg:grid-cols-2 gap-x-20 w-full items-center">
-      <div className="h-[300px]">
-        <ImageCarousel
-          images={[
-            {
-              img: bioImage,
-              alt: "Dastan Abikov",
-            },
-            {
-              img: bioImage,
-              alt: "Dastan Abikov",
-            },
-          ]}
-        />
-      </div>
+      <ImageCarousel
+        className="h-[500px]"
+        images={[
+          {
+            img: heroImage,
+            alt: "",
+          },
+          {
+            img: bioImage,
+            alt: "",
+          },
+        ]}
+      />
+      {/* <Image
+          src={bioImage}
+          alt="Dastan Abikov"
+          placeholder="blur"
+          fill
+          style={{
+            objectFit: "cover",
+            height: "100%",
+            width: "100%",
+          }}
+        /> */}
+
       <div className="flex flex-col gap-y-7">
         <Heading subtitle={"BIOGRAPHY"} align={"left"}>
           <h4>

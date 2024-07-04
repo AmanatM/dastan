@@ -14,29 +14,34 @@ type ImageCarouselProps = {
   className?: string;
 };
 
-function ImageCarousel({ images, delay = 10000, className }: ImageCarouselProps) {
-  const plugin = React.useRef(Autoplay({ delay: delay, stopOnInteraction: true }));
-
+function ImageCarousel({ images, delay = 2000, className }: ImageCarouselProps) {
   return (
     <Carousel
       opts={{
         loop: true,
-        duration: 500,
       }}
-      plugins={[plugin.current]}
-      className={cn("", className)}
+      plugins={[
+        Autoplay({
+          delay: delay,
+        }),
+      ]}
     >
-      <CarouselContent className="relative">
+      <CarouselContent className="">
         {images.map((image, index) => (
-          <CarouselItem key={index} className=" aspect-square w-full">
-            <Image
-              src={image.img}
-              alt={image.alt}
-              fill
-              style={{
-                objectFit: "cover",
-              }}
-            />
+          <CarouselItem key={index} className="relative">
+            <div className={cn("relative", className)}>
+              <Image
+                src={image.img}
+                alt={image.alt}
+                placeholder="blur"
+                // fill
+                style={{
+                  objectFit: "cover",
+                  height: "100%",
+                  width: "100%",
+                }}
+              />
+            </div>
           </CarouselItem>
         ))}
       </CarouselContent>
