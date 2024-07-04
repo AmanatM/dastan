@@ -10,7 +10,7 @@ import { ButtonLink } from "../ui/button-link";
 
 export async function Header() {
   return (
-    <header className="fixed left-0 top-0 z-50 flex w-full flex-col bg-[linear-gradient(180deg,_rgba(0,0,0,1)_0%,_rgba(0,0,0,0)_100%)]">
+    <header className="fixed left-0 top-0 z-50 flex w-full flex-col bg-[linear-gradient(180deg,_rgba(0,0,0,0.8)_0%,_rgba(0,0,0,0)_100%)]">
       <div className="flex h-[--header-height]">
         <div className="container mx-auto grid w-full grid-cols-2 px-6 first:*:justify-self-start">
           <Link href={"/"} className="mr-10 flex items-center">

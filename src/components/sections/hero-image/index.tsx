@@ -24,7 +24,9 @@ export function HeroImage() {
           </div>
         </div>
       </div>
-      <h1 className="absolute bottom-0 left-0 right-0 font-bold text-9xl text-center text-nowrap">DASTAN ABIKOV</h1>
+      <h1 className="absolute bottom-0 left-0 right-0 font-bold text-[170px] text-center text-nowrap max-w-full">
+        DASTAN ABIKOV
+      </h1>
     </section>
   );
 }
