@@ -1,10 +1,11 @@
 import ImageCarousel from "@/components/ImageCarousel";
 import heroImage from "./hero.jpg";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useFormatter, useTranslations } from "next-intl";
 
 export function HeroImage() {
   const t = useTranslations("Hero");
+
   return (
     <section className="relative h-screen overflow-hidden">
       <div className="flex flex-col md:flex-row size-full">
@@ -27,14 +28,14 @@ export function HeroImage() {
             {["Entrepreneur", "Investor", "Speaker", "Philanthropist"].map((item, index) => (
               <div key={index} className="flex items-center gap-x-2">
                 <div className="w-[8px] h-[8px] bg-accent"></div>
-                <div>{item}</div>
+                <div>{t(`description.${index}`)}</div>
               </div>
             ))}
           </div>
         </div>
       </div>
-      <h1 className="absolute bottom-0 left-0 right-0 font-bold text-[12vw] text-center text-nowrap max-w-full hidden md:block">
-        {t("Name")}
+      <h1 className="absolute bottom-0 left-0 right-0 font-bold text-[11vw] text-center text-nowrap max-w-full hidden md:block">
+        {t("name")}
       </h1>
     </section>
   );

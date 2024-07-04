@@ -3,6 +3,12 @@
     "title": "Dastan Abikov"
   },
   "Hero": {
-    "Name": "DASTAN ABIKOV"
+    "name": "DASTAN ABIKOV",
+    "description": {
+      "0": "Entrepreneur",
+      "1": "Investor",
+      "2": "Speaker",
+      "3": "Philanthropist"
+    }
   }
 }
