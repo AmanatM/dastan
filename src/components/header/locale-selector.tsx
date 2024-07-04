@@ -1,6 +1,6 @@
 "use client";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "../ui/select";
-import { useTransition, useState } from "react";
+import { useTransition, useState, useEffect } from "react";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { locales } from "@/config";
 import { useLocale } from "next-intl";
@@ -13,6 +13,10 @@ function LocaleSelector() {
   const currentLocale = useLocale();
 
   const [value, setValue] = useState(currentLocale);
+
+  useEffect(() => {
+    setValue(currentLocale);
+  }, [currentLocale]);
 
   function onSelectChange(nextLocale: string) {
     startTransition(() => {
