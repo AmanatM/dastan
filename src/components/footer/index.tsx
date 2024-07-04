@@ -28,7 +28,7 @@ export async function Footer() {
         </div>
 
         <p className="col-span-2 text-pretty text-sm text-text-tertiary dark:text-dark-text-tertiary sm:col-span-1 ">
-          Go Engine © 2024 . All rights reserved.
+          Dastan Abikov © 2024 . All rights reserved.
         </p>
       </div>
     </footer>

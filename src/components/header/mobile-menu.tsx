@@ -19,8 +19,8 @@ export function MobileMenu() {
       <SheetTrigger asChild>
         <Button
           size={"icon"}
-          className="lg:hidden"
-          variant="outline"
+          className=""
+          variant="ghost"
           aria-controls="main-menu"
           aria-expanded={navOpened}
           aria-label="Toggle main menu"

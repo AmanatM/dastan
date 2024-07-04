@@ -9,9 +9,8 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "GoEngine | Digital Agency for Web Development, SEO, and Marketing",
-  description:
-    "GoEngine - Your partner in digital success. We offer comprehensive digital solutions including website development, SEO optimization, and digital marketing to help your business thrive online.",
+  title: "Dastan Abikov",
+  description: "Dastan Abikov",
   icons: {
     icon: "/favicon.svg",
   },
@@ -25,7 +24,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className={`min-h-svh max-w-[100vw] font-sans`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <Header />
           <main className="min-h-[calc(100svh-var(--header-height))]">{children}</main>
           <Footer />

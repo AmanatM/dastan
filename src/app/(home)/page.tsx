@@ -2,6 +2,7 @@ import { Newsletter } from "@/components/newsletter";
 import { Companies } from "@/components/sections/companies";
 import { FeaturesList } from "@/components/sections/features/features-list";
 import { Hero } from "@/components/sections/hero";
+import { HeroImage } from "@/components/sections/hero-image";
 import { Testimonials } from "@/components/sections/testimonials";
 
 import { featuresCardsList } from "@/config/home";
@@ -11,19 +12,9 @@ import { title } from "process";
 export default function Home() {
   return (
     <div>
-      <Hero
-        heading={{
-          title: "GoEngine - Your Partner in Digital Success",
-          subtitle: "GoEngine accelerates your business with top-tier digital solutions. ",
-        }}
-        customersText="10k+ happy customers"
-        actionButtons={[
-          { href: "#", type: "secondary", label: "See Services" },
-          { href: "#", type: "primary", label: "Work With Us" },
-        ]}
-      />
+      <HeroImage />
       <Companies />
-
+      {/* 
       <FeaturesList
         heading={{
           title: "Enhanced Team Communication",
@@ -41,7 +32,7 @@ export default function Home() {
         }}
         quotes={homeTestimonials}
       />
-      <Newsletter />
+      <Newsletter /> */}
     </div>
   );
 }

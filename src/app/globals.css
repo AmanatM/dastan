@@ -24,7 +24,7 @@
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
 
-    --accent: 0 0% 96.1%;
+    --accent: 16.92 100% 50%;
     --accent-foreground: 0 0% 9%;
 
     --destructive: 0 84.2% 60.2%;
@@ -55,7 +55,7 @@
     --muted: 0 0% 14.9%;
     --muted-foreground: 240, 4%, 46%;
 
-    --accent: 0 0% 14.9%;
+    --accent: 16.92 100% 50%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -69,7 +69,7 @@
 
 @layer base {
   :root {
-    --header-height: 64px;
+    --header-height: 75px;
     --text-gradient: linear-gradient(180deg, #555, #000);
   }
 
@@ -94,5 +94,9 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .header-gradient {
+    background: (rgba(0, 0, 0, 0.77) 0%, rgba(0, 0, 0, 0) 100%);
   }
 }
