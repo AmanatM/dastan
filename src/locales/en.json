@@ -2,6 +2,9 @@
   "Metadata": {
     "title": "Dastan Abikov"
   },
+  "Global": {
+    "name": "DASTAN ABIKOV"
+  },
   "Hero": {
     "name": "DASTAN ABIKOV",
     "description": {
@@ -14,5 +17,9 @@
   "notFound": {
     "title": "Page not found",
     "goBack": "Go back to the home page"
+  },
+  "Biography": {
+    "subtitle": "Biography",
+    "title": " \nWAS BORN IN 1999\n\nIN KYRGYZ REPUBLIC"
   }
 }

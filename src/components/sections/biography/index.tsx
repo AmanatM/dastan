@@ -6,8 +6,11 @@ import Image from "next/image";
 
 import slider1 from "./images/childhood.jpg";
 import slider2 from "./images/certificate.jpg";
+import { useTranslations } from "next-intl";
 
 function Biography() {
+  const t = useTranslations("Biography");
+  const global = useTranslations("Global");
   return (
     <Section container={"default"} className="grid md:grid-cols-2 gap-x-20 w-full items-center" id="biography">
       <ImageCarousel
@@ -25,11 +28,10 @@ function Biography() {
       />
 
       <div className="flex flex-col gap-y-7">
-        <Heading subtitle={"BIOGRAPHY"} align={"left"}>
+        <Heading subtitle={t("subtitle")} align={"left"}>
           <h4>
-            <span className="text-accent">DASTAN ABIKOV</span>
-            <br /> WAS BORN IN 1999
-            <br /> IN KYRGYZ REPUBLIC
+            <span className="text-accent">{global("name")}</span>
+            <br /> {t("title")}
           </h4>
         </Heading>
         <div className="flex flex-col gap-y-3">
