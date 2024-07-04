@@ -51,7 +51,7 @@ export function MobileMenu() {
           </SheetClose>
         </div>
         <Separator />
-        <div className="flex flex-row flex-wrap space-y-2 pt-4">
+        <div className="flex flex-row flex-wrap space-y-4 pt-4">
           {mainNav.map((link, index) => (
             <Link key={index} href={link.href} onClick={toggleNav} className={"w-full justify-start px-2"}>
               {t(link.titleKey as "home" | "bio" | "about" | "speaking" | "news" | "contact")}

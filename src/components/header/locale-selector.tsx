@@ -1,15 +1,15 @@
-"use client";
-import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
-import { useTransition, useState, useEffect } from "react";
-import { useParams, usePathname, useRouter } from "next/navigation";
-import { locales } from "@/config";
-import { useLocale } from "next-intl";
-import { KGFlagIcon, RUFlagIcon, USFlagIcon } from "@/icons/flag-icons";
+"use client"
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "../ui/select"
+import { useTransition, useState, useEffect } from "react"
+import { useParams, usePathname, useRouter } from "next/navigation"
+import { locales } from "@/config"
+import { useLocale } from "next-intl"
+import { KGFlagIcon, RUFlagIcon, USFlagIcon } from "@/icons/flag-icons"
 
 type Language = {
-  name: string;
-  icon: JSX.Element;
-};
+  name: string
+  icon: JSX.Element
+}
 
 const languages: Record<string, Language> = {
   en: {
@@ -24,31 +24,31 @@ const languages: Record<string, Language> = {
     name: "KG",
     icon: <KGFlagIcon />,
   },
-};
+}
 
 function LocaleSelector() {
-  const router = useRouter();
-  const [isPending, startTransition] = useTransition();
-  const pathname = usePathname();
-  const currentLocale = useLocale();
+  const router = useRouter()
+  const [isPending, startTransition] = useTransition()
+  const pathname = usePathname()
+  const currentLocale = useLocale()
 
-  const [value, setValue] = useState(currentLocale);
+  const [value, setValue] = useState(currentLocale)
 
   useEffect(() => {
-    setValue(currentLocale);
-  }, [currentLocale]);
+    setValue(currentLocale)
+  }, [currentLocale])
 
   function onSelectChange(nextLocale: string) {
     startTransition(() => {
-      const urlSegments = pathname.split("/").filter((segment) => segment !== currentLocale);
-      router.replace(`/${nextLocale}/${urlSegments.join("/")}`, { scroll: false });
-      setValue(nextLocale);
-    });
+      const urlSegments = pathname.split("/").filter(segment => segment !== currentLocale)
+      router.replace(`/${nextLocale}/${urlSegments.join("/")}`, { scroll: false })
+      setValue(nextLocale)
+    })
   }
 
   return (
     <Select onValueChange={onSelectChange} value={value} disabled={isPending}>
-      <SelectTrigger className="border-none outline-none bg-transparent uppercase">
+      <SelectTrigger className="border-none bg-transparent uppercase">
         <SelectValue>
           <div className="flex items-center gap-x-2">
             {languages[value].icon} {languages[value].name}
@@ -57,8 +57,8 @@ function LocaleSelector() {
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          {locales.map((locale) => (
-            <SelectItem value={locale} key={locale} className="uppercase cursor-pointer">
+          {locales.map(locale => (
+            <SelectItem value={locale} key={locale} className="cursor-pointer uppercase">
               <div className="flex items-center gap-x-2">
                 {languages[locale].icon} {languages[locale].name}
               </div>
@@ -67,7 +67,7 @@ function LocaleSelector() {
         </SelectGroup>
       </SelectContent>
     </Select>
-  );
+  )
 }
 
-export default LocaleSelector;
+export default LocaleSelector
