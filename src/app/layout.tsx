@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-
 import "./globals.css";
 
 import { GeistSans } from "geist/font/sans";
@@ -7,6 +6,7 @@ import { GeistMono } from "geist/font/mono";
 
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -31,6 +31,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  unstable_setRequestLocale(locale);
   const messages = await getMessages();
 
   return (
