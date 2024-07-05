@@ -1,12 +1,15 @@
 import { Heading } from "@/components/common/heading"
 import { Section } from "@/components/common/layout"
 import { buttonVariants } from "@/components/ui/button"
-import { ButtonLink } from "@/components/ui/button-link"
 import { cn } from "@/lib/utils"
 import { Link } from "@/navigation"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
+import { unstable_setRequestLocale } from "next-intl/server"
 
-export default function NotFound() {
+export default function NotFoundPage() {
+  const locale = useLocale()
+  unstable_setRequestLocale(locale)
+
   const t = useTranslations("notFound")
 
   return (
@@ -14,7 +17,7 @@ export default function NotFound() {
       <Heading subtitle="404">
         <h2>{t("title")}</h2>
       </Heading>
-      <Link href={"/"} className={cn(buttonVariants())}>
+      <Link href={"/"} scroll={false} className={cn(buttonVariants())}>
         {t("goBack")}
       </Link>
     </Section>
