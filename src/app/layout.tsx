@@ -4,8 +4,8 @@ import { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import PageTransitionEffect from "@/components/Transition"
-import { getLocale, unstable_setRequestLocale } from "next-intl/server"
-import { useLocale } from "next-intl"
+import { unstable_setRequestLocale } from "next-intl/server"
+import { locales } from "@/config"
 
 type Props = {
   children: ReactNode
@@ -20,10 +20,11 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children, params: { locale } }: Props) {
-  unstable_setRequestLocale(locale)
+export function generateStaticParams() {
+  return locales.map(locale => ({ locale }))
+}
 
-  console.log("locale", locale)
+export default function RootLayout({ children, params: { locale } }: Props) {
   unstable_setRequestLocale(locale)
 
   return (
