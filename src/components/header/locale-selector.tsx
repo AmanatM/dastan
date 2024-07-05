@@ -5,6 +5,7 @@ import { useParams, usePathname, useRouter } from "next/navigation"
 import { locales } from "@/config"
 import { useLocale } from "next-intl"
 import { KGFlagIcon, RUFlagIcon, USFlagIcon } from "@/icons/flag-icons"
+import { AnimatePresence, motion } from "framer-motion"
 
 type Language = {
   name: string
@@ -48,15 +49,24 @@ function LocaleSelector({ setNavOpened }: { setNavOpened?: (value: boolean) => v
   }
 
   return (
-    <Select onValueChange={onSelectChange} value={value} disabled={isPending}>
-      <SelectTrigger className="border-none bg-transparent uppercase">
+    <Select onValueChange={onSelectChange} value={value}>
+      <SelectTrigger className="!focus:ring-0 !selection:ring-0 border-none bg-transparent uppercase !ring-0">
         <SelectValue>
-          <div className="flex items-center gap-x-2">
-            {languages[value].icon} {languages[value].name}
-          </div>
+          <AnimatePresence mode="popLayout" initial={false}>
+            <motion.div
+              key={value}
+              className="flex items-center gap-x-2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ ease: "easeInOut", duration: 0.3 }}
+            >
+              {languages[value].icon} {languages[value].name}
+            </motion.div>
+          </AnimatePresence>
         </SelectValue>
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent className="!focus:ring-0 !ring-0">
         <SelectGroup>
           {locales.map(locale => (
             <SelectItem value={locale} key={locale} className="cursor-pointer uppercase">

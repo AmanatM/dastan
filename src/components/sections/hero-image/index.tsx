@@ -55,7 +55,7 @@ export function HeroImage() {
       </div>
 
       <motion.div
-        className="absolute bottom-0 left-0 right-0 hidden max-w-full text-nowrap text-center text-[11vw] font-bold uppercase md:block"
+        className="absolute bottom-0 left-0 right-0 hidden max-w-full text-nowrap text-center font-bold uppercase md:block"
         initial="hidden"
         animate="show"
         viewport={{ once: true }}
@@ -68,7 +68,9 @@ export function HeroImage() {
           },
         }}
       >
-        <motion.h1 variants={FADE_UP_ANIMATION_VARIANTS}>{t("Global.name")}</motion.h1>
+        <motion.h1 variants={FADE_UP_ANIMATION_VARIANTS} className="text-[11vw]">
+          {t("Global.name")}
+        </motion.h1>
       </motion.div>
     </section>
   )
