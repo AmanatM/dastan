@@ -1,7 +1,8 @@
 "use client"
 
+import { usePathname } from "@/navigation"
 import { motion, AnimatePresence } from "framer-motion"
-import { usePathname } from "next/navigation"
+import { useLocale } from "next-intl"
 import { LayoutRouterContext } from "next/dist/shared/lib/app-router-context.shared-runtime"
 import { useContext, useRef } from "react"
 
@@ -24,7 +25,7 @@ const variants = {
 
 const PageTransitionEffect = ({ children }: { children: React.ReactNode }) => {
   // The `key` is tied to the url using the `usePathname` hook.
-  const key = usePathname()
+  const key = useLocale()
 
   return (
     <AnimatePresence mode="popLayout">
