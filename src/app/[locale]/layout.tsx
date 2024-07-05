@@ -6,7 +6,6 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { locales } from "@/config"
 import { ReactNode } from "react"
-import Transition from "@/components/Transition"
 
 type Props = {
   children: ReactNode
