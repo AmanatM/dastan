@@ -3,6 +3,7 @@ import { HeroImage } from "@/components/sections/hero-image"
 
 import Biography from "@/components/sections/biography"
 import { unstable_setRequestLocale } from "next-intl/server"
+import { Link } from "@/navigation"
 
 export default function Home({ params: { locale } }: { params: { locale: string } }) {
   unstable_setRequestLocale(locale)
