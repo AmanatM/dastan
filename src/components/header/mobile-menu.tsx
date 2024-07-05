@@ -12,13 +12,13 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { useState } from "react"
-import Link from "next/link"
 import { mainNav } from "@/config/navigation-links"
 import { LogoIcon } from "@/icons/logo-icons"
 import LocaleSelector from "./locale-selector"
 import { Separator } from "../ui/separator"
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons"
 import { useTranslations } from "next-intl"
+import { Link } from "@/navigation"
 
 export function MobileMenu() {
   const [navOpened, setNavOpened] = useState(false)
