@@ -6,6 +6,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { locales } from "@/config"
 import { ReactNode } from "react"
+import Transition from "@/components/Transition"
 
 type Props = {
   children: ReactNode
@@ -34,5 +35,11 @@ export default async function LocaleLayout({
   unstable_setRequestLocale(locale)
   const messages = await getMessages()
 
-  return <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+  return (
+    <NextIntlClientProvider messages={messages}>
+      <Header />
+      <main className="min-h-[calc(100svh-var(--header-height))]">{children}</main>
+      <Footer />
+    </NextIntlClientProvider>
+  )
 }
