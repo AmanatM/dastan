@@ -1,8 +1,3 @@
-import type { Metadata } from "next"
-
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
-
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations } from "next-intl/server"
 import { unstable_setRequestLocale } from "next-intl/server"
@@ -11,7 +6,6 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { locales } from "@/config"
 import { ReactNode } from "react"
-import Transition from "@/components/Transition"
 
 type Props = {
   children: ReactNode
@@ -30,7 +24,7 @@ export function generateStaticParams() {
   return locales.map(locale => ({ locale }))
 }
 
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
   params: { locale },
 }: {
@@ -41,16 +35,10 @@ export default async function RootLayout({
   const messages = await getMessages()
 
   return (
-    <html className={`${GeistSans.variable} ${GeistMono.variable} scroll-smooth`} lang={locale}>
-      <body className={`min-h-svh max-w-[100vw] font-sans`}>
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          <Transition>
-            <main className="min-h-[calc(100svh-var(--header-height))]">{children}</main>
-          </Transition>
-          <Footer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <Header />
+      <main className="min-h-[calc(100svh-var(--header-height))]">{children}</main>
+      <Footer />
+    </NextIntlClientProvider>
   )
 }
