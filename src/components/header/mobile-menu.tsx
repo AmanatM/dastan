@@ -60,7 +60,7 @@ export function MobileMenu() {
           </Link>
 
           <div className="flex items-center gap-x-8">
-            <LocaleSelector />
+            <LocaleSelector setNavOpened={setNavOpened} />
             <SheetClose asChild>
               <Button size={"icon"} className="hover:bg-transparent" variant="ghost">
                 <Cross1Icon className={"h-[20px] w-[20px]"} />

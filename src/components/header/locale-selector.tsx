@@ -26,7 +26,7 @@ const languages: Record<string, Language> = {
   },
 }
 
-function LocaleSelector() {
+function LocaleSelector({ setNavOpened }: { setNavOpened?: (value: boolean) => void }) {
   const router = useRouter()
   const [isPending, startTransition] = useTransition()
   const pathname = usePathname()
@@ -43,6 +43,7 @@ function LocaleSelector() {
       const urlSegments = pathname.split("/").filter(segment => segment !== currentLocale)
       router.replace(`/${nextLocale}/${urlSegments.join("/")}`, { scroll: false })
       setValue(nextLocale)
+      setNavOpened && setNavOpened(false)
     })
   }
 
