@@ -36,7 +36,7 @@ export default async function LocaleLayout({
   const messages = await getMessages()
 
   return (
-    <NextIntlClientProvider messages={messages}>
+    <NextIntlClientProvider messages={messages} locale={locale}>
       <Header />
       <main className="min-h-[calc(100svh-var(--header-height))]">
         <div vaul-drawer-wrapper="" className="bg-background">

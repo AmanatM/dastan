@@ -1,11 +1,11 @@
 "use client"
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "../ui/select"
 import { useTransition, useState, useEffect } from "react"
-import { useParams, usePathname, useRouter } from "next/navigation"
 import { locales } from "@/config"
 import { useLocale } from "next-intl"
 import { KGFlagIcon, RUFlagIcon, USFlagIcon } from "@/icons/flag-icons"
 import { AnimatePresence, motion } from "framer-motion"
+import { usePathname, useRouter } from "@/navigation"
 
 type Language = {
   name: string
@@ -39,10 +39,9 @@ function LocaleSelector({ setNavOpened }: { setNavOpened?: (value: boolean) => v
     setValue(currentLocale)
   }, [currentLocale])
 
-  function onSelectChange(nextLocale: string) {
+  function onSelectChange(nextLocale: "en" | "ru" | "ky") {
     startTransition(() => {
-      const urlSegments = pathname.split("/").filter(segment => segment !== currentLocale)
-      router.replace(`/${nextLocale}/${urlSegments.join("/")}`, { scroll: false })
+      router.replace(pathname, { scroll: false, locale: nextLocale })
       setValue(nextLocale)
       setNavOpened && setNavOpened(false)
     })
