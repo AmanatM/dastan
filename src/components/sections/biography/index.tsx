@@ -18,6 +18,7 @@ import {
   CredenzaFooter,
   CredenzaClose,
 } from "@/components/ui/credenza"
+import { ScrollArea } from "@/components/ui/scroll-area"
 
 export default function Biography() {
   const t = useTranslations()
@@ -82,11 +83,15 @@ function ReadMoreContent() {
         <CredenzaTitle className="uppercase">{t("Biography.subtitle")}</CredenzaTitle>
         <CredenzaDescription className="hidden">{t("Biography.subtitle")}</CredenzaDescription>
       </CredenzaHeader>
-      <CredenzaBody className="space-y-4">
-        <p>{t("Biography.readMore.paragraph1")}</p>
-        <p>{t("Biography.readMore.paragraph2")}</p>
-        <p>{t("Biography.readMore.paragraph3")}</p>
-        <p>{t("Biography.readMore.paragraph4")}</p>
+      <CredenzaBody>
+        <ScrollArea className="flex h-[400px] max-h-[80vh] w-full">
+          <div className="space-y-3">
+            <p>{t("Biography.readMore.paragraph1")}</p>
+            <p>{t("Biography.readMore.paragraph2")}</p>
+            <p>{t("Biography.readMore.paragraph3")}</p>
+            <p>{t("Biography.readMore.paragraph4")}</p>
+          </div>
+        </ScrollArea>
       </CredenzaBody>
       <CredenzaFooter>
         <CredenzaClose asChild>

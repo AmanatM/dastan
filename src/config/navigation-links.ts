@@ -6,7 +6,7 @@ type MainNav = {
 export const mainNav: MainNav[] = [
   {
     titleKey: "bio",
-    href: "/biography",
+    href: "#biography",
   },
   {
     titleKey: "about",
