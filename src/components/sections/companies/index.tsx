@@ -3,13 +3,18 @@ import { Section } from "@/components/common/layout"
 import styles from "./companies.module.css"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
-import { IlgeriLogo, KyrgyzFundLogo, QoorchaqLogo } from "./companies_logos"
-import { companies } from "@/config/companies"
 
-const companiesLogos = [
+import NeoplaceLogo from "@public/images/companies/neoplace.svg"
+import QoorchaqLogo from "@public/images/companies/qoorchaq.svg"
+import IlgeriLogo from "@public/images/companies/ilgeri.svg"
+import KyrgyzfundLogo from "@public/images/companies/kyrgyzfund.svg"
+import AalayLogo from "@public/images/companies/aalay.svg"
+import PhantomLogo from "@public/images/companies/phantom.svg"
+
+export const companies = [
   {
-    title: "Kyrgyz Fund",
-    icon: KyrgyzFundLogo,
+    title: "Neoplace",
+    icon: NeoplaceLogo,
   },
   {
     title: "Qoorchaq",
@@ -19,8 +24,19 @@ const companiesLogos = [
     title: "Ilgeri",
     icon: IlgeriLogo,
   },
+  {
+    title: "Kyrgyz Fund",
+    icon: KyrgyzfundLogo,
+  },
+  {
+    title: "Aalay Jiu Jitsu Team",
+    icon: AalayLogo,
+  },
+  {
+    title: "Phantom Car Rental",
+    icon: PhantomLogo,
+  },
 ]
-
 export function Companies() {
   return (
     <Section container="full">
@@ -33,14 +49,9 @@ export function Companies() {
         <div className="pointer-events-none absolute left-0 top-0 h-full w-[30vw] bg-transparent bg-gradient-to-r from-background xl:hidden" />
         <div className="pointer-events-none absolute right-0 top-0 h-full w-[30vw] bg-transparent bg-gradient-to-l from-background xl:hidden" />
         <div className={cn("flex shrink-0 items-center gap-4 px-6 lg:gap-6 lg:px-12", styles.scrollbar)}>
-          {/* {companies.map(company => (
-            <figure key={company.title} className="flex h-16 items-center px-2 py-3 lg:p-4">
-              <company.icon />
-            </figure>
-          ))} */}
           {companies.map(company => (
-            <figure key={company.image?.url ?? company.title} className="flex h-16 items-center px-2 py-3 lg:p-4">
-              <Image alt={company.title} className="w-24 lg:w-32" height={20} src={company.image!.url} width={32} />
+            <figure key={company.title} className="flex h-16 items-center px-2 py-3 lg:p-4">
+              <Image alt={company.title} className="w-24 lg:w-32" placeholder="empty" src={company.icon} />
             </figure>
           ))}
         </div>

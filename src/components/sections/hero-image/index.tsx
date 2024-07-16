@@ -1,10 +1,10 @@
 "use client"
-import ImageCarousel from "@/components/ImageCarousel"
-import heroImage from "./hero.jpg"
 import Image from "next/image"
-import { MessageKeys, useFormatter, useTranslations } from "next-intl"
+import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { FADE_UP_ANIMATION_VARIANTS } from "@/config/motion-animations"
+
+import heroImage from "./hero.jpg"
 
 export function HeroImage() {
   const t = useTranslations()
@@ -16,6 +16,7 @@ export function HeroImage() {
           <Image
             src={heroImage}
             alt={t("Global.name")}
+            priority={true}
             placeholder="blur"
             fill
             style={{
