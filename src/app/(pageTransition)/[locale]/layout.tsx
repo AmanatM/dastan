@@ -37,7 +37,11 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider messages={messages}>
       <Header />
-      <main className="min-h-[calc(100svh-var(--header-height))]">{children}</main>
+      <main className="min-h-[calc(100svh-var(--header-height))]">
+        <div vaul-drawer-wrapper="" className="bg-background">
+          {children}
+        </div>
+      </main>
       <Footer />
     </NextIntlClientProvider>
   )
