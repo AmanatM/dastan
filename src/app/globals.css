@@ -38,7 +38,7 @@
 
 @layer base {
   :root {
-    --header-height: 75px;
+    --header-height: 65px;
     --text-gradient: linear-gradient(180deg, #555, #000);
   }
 

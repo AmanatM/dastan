@@ -10,7 +10,6 @@ export default function Home({ params: { locale } }: { params: { locale: string 
     <div>
       <HeroImage />
       <Companies />
-
       <Biography />
 
       {/* 

@@ -49,7 +49,7 @@ function LocaleSelector({ setNavOpened }: { setNavOpened?: (value: boolean) => v
   }
 
   return (
-    <Select onValueChange={onSelectChange} value={value}>
+    <Select onValueChange={onSelectChange} value={value} disabled={isPending}>
       <SelectTrigger className="!focus:ring-0 !selection:ring-0 border-none bg-transparent uppercase !ring-0">
         <SelectValue>
           <AnimatePresence mode="popLayout" initial={false}>
