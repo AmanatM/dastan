@@ -10,6 +10,15 @@ import { useTranslations } from "next-intl"
 
 function Biography() {
   const t = useTranslations()
+
+  const shortFacts = [
+    t("Biography.short_facts.0"),
+    t("Biography.short_facts.1"),
+    t("Biography.short_facts.2"),
+    t("Biography.short_facts.3"),
+    t("Biography.short_facts.4"),
+  ]
+
   return (
     <Section container={"default"} className="grid w-full items-center gap-x-20 md:grid-cols-2" id="biography">
       <ImageCarousel
@@ -34,10 +43,10 @@ function Biography() {
           </h4>
         </Heading>
         <div className="flex flex-col gap-y-3">
-          {["Entrepreneur", "Investor", "Speaker", "Philanthropist"].map((item, index) => (
+          {shortFacts.map((fact, index) => (
             <div key={index} className="flex items-center gap-x-2">
               <div className="h-[8px] w-[8px] bg-accent" />
-              <div>{item}</div>
+              <div>{fact}</div>
             </div>
           ))}
         </div>

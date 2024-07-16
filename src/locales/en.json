@@ -7,10 +7,11 @@
   },
   "Hero": {
     "description": {
-      "0": "Entrepreneur",
+      "0": "Serial entrepreneur",
       "1": "Investor",
       "2": "Speaker",
-      "3": "Philanthropist"
+      "3": "Diplomat",
+      "4": "Philanthropist"
     }
   },
   "notFound": {
@@ -19,7 +20,14 @@
   },
   "Biography": {
     "subtitle": "Biography",
-    "title": "WAS BORN IN 1999 IN KYRGYZ REPUBLIC"
+    "title": "WAS BORN IN 1999 IN KYRGYZ REPUBLIC",
+    "short_facts": {
+      "0": "At the age of 15, he started his entrepreneurial journey",
+      "1": "He graduated from high school at 18.",
+      "2": "At 22, he completed the professional education program at Harvard Business School (HBS)",
+      "3": "At 24, he became a member of the Mountain Partnership at the United Nations (UN)",
+      "4": "At 25, he was appointed as a member of the Board of Trustees of the International University of Kyrgyzstan (IUK)"
+    }
   },
   "Footer": {
     "rightsReserved": "All rights reserved."
