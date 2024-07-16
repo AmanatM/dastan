@@ -1,45 +1,45 @@
 type Company = {
-  title: string;
+  title: string
   image: {
-    url: string;
-  };
-};
+    url: string
+  }
+}
 
 export const companies: Company[] = [
   {
-    title: "Proline",
+    title: "Neoplace",
     image: {
-      url: "/images/companies/proline.svg",
+      url: "/images/companies/neoplace.svg",
     },
   },
   {
-    title: "Cloud",
+    title: "Qoorchaq",
     image: {
-      url: "/images/companies/cloud.svg",
+      url: "/images/companies/qoorchaq.svg",
     },
   },
   {
-    title: "Google Partner",
+    title: "Ilgeri",
     image: {
-      url: "/images/companies/google-partner.svg",
+      url: "/images/companies/ilgeri.svg",
     },
   },
   {
-    title: "Greenish",
+    title: "Kyrgyz Fund",
     image: {
-      url: "/images/companies/greenish.svg",
+      url: "/images/companies/kyrgyzfund.svg",
     },
   },
   {
-    title: "Volume",
+    title: "Aalay Jiu Jitsu Team",
     image: {
-      url: "/images/companies/volume.svg",
+      url: "/images/companies/aalay.svg",
     },
   },
   {
-    title: "PinPoint",
+    title: "Phantom Car Rental",
     image: {
-      url: "/images/companies/pinpoint.svg",
+      url: "/images/companies/phantom.svg",
     },
   },
-];
+]
