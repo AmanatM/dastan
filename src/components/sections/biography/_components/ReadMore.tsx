@@ -21,15 +21,15 @@ function ReadMore() {
         <CredenzaDescription className="hidden">{t("Biography.subtitle")}</CredenzaDescription>
       </CredenzaHeader>
       <CredenzaBody>
-        <ScrollArea className="h-[400px] overflow-auto">
+        <div className="h-[400px] overflow-auto">
           <div className="space-y-3 p-3">
             <p>{t("Biography.readMore.paragraph1")}</p>
             <p>{t("Biography.readMore.paragraph2")}</p>
             <p>{t("Biography.readMore.paragraph3")}</p>
             <p>{t("Biography.readMore.paragraph4")}</p>
           </div>
-          <ScrollBar orientation="horizontal" />
-        </ScrollArea>
+          {/* <ScrollBar orientation="horizontal" /> */}
+        </div>
       </CredenzaBody>
       <CredenzaFooter>
         <CredenzaClose asChild>
