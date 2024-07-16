@@ -46,7 +46,7 @@ export function HeroImage() {
 
             {["Entrepreneur", "Investor", "Speaker", "Diplomat", "Philanthropist"].map((item, index) => (
               <div key={index} className="flex items-center gap-x-2">
-                <div className="h-[8px] w-[8px] bg-accent"></div>
+                <div className="!h-[8px] !w-[8px] shrink-0 bg-accent"></div>
                 <div>{t(`Hero.description.${index}` as `Hero.description.${0 | 1 | 2 | 3}`)}</div>
               </div>
             ))}

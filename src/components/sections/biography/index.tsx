@@ -7,8 +7,19 @@ import Image from "next/image"
 import slider1 from "./images/childhood.jpg"
 import slider2 from "./images/certificate.jpg"
 import { useTranslations } from "next-intl"
+import {
+  Credenza,
+  CredenzaTrigger,
+  CredenzaContent,
+  CredenzaHeader,
+  CredenzaTitle,
+  CredenzaDescription,
+  CredenzaBody,
+  CredenzaFooter,
+  CredenzaClose,
+} from "@/components/ui/credenza"
 
-function Biography() {
+export default function Biography() {
   const t = useTranslations()
 
   const shortFacts = [
@@ -44,18 +55,44 @@ function Biography() {
         </Heading>
         <div className="flex flex-col gap-y-3">
           {shortFacts.map((fact, index) => (
-            <div key={index} className="flex items-center gap-x-2">
-              <div className="h-[8px] w-[8px] bg-accent" />
+            <div key={index} className="flex items-start gap-x-2">
+              <div className="mt-2 !h-[8px] !w-[8px] shrink-0 bg-accent" />
               <div>{fact}</div>
             </div>
           ))}
         </div>
-        <Button size={"lg"} className="self-start text-lg">
-          Read More
-        </Button>
+        <Credenza>
+          <CredenzaTrigger asChild>
+            <Button size={"lg"} className="self-start text-lg">
+              {t("Global.readMore")}
+            </Button>
+          </CredenzaTrigger>
+          <ReadMoreContent />
+        </Credenza>
       </div>
     </Section>
   )
 }
 
-export default Biography
+function ReadMoreContent() {
+  const t = useTranslations()
+  return (
+    <CredenzaContent className="max-w-2xl">
+      <CredenzaHeader>
+        <CredenzaTitle className="uppercase">{t("Biography.subtitle")}</CredenzaTitle>
+        <CredenzaDescription className="hidden">{t("Biography.subtitle")}</CredenzaDescription>
+      </CredenzaHeader>
+      <CredenzaBody className="space-y-4">
+        <p>{t("Biography.readMore.paragraph1")}</p>
+        <p>{t("Biography.readMore.paragraph2")}</p>
+        <p>{t("Biography.readMore.paragraph3")}</p>
+        <p>{t("Biography.readMore.paragraph4")}</p>
+      </CredenzaBody>
+      <CredenzaFooter>
+        <CredenzaClose asChild>
+          <Button>{t("Global.close")}</Button>
+        </CredenzaClose>
+      </CredenzaFooter>
+    </CredenzaContent>
+  )
+}
