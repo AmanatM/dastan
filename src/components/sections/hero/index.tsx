@@ -6,7 +6,7 @@ import { FADE_UP_ANIMATION_VARIANTS } from "@/config/motion-animations"
 
 import heroImage from "./hero.jpg"
 
-export function HeroImage() {
+export default function Hero() {
   const t = useTranslations()
 
   return (
