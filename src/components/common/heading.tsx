@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils"
 import { Slot } from "@radix-ui/react-slot"
 import { type VariantProps, cva } from "class-variance-authority"
 import clsx from "clsx"
-import { motion, useInView } from "framer-motion"
+import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 
 const $headingContainer = cva("flex flex-col gap-3", {
@@ -41,7 +41,7 @@ export function Heading({ subtitle, className, tag, align = "center", ...props }
 
   return (
     <div ref={ref}>
-      <motion.div
+      <m.div
         className={$headingContainer({ align, className })}
         initial="hidden"
         animate={isInView ? "show" : "hidden"}
@@ -57,7 +57,7 @@ export function Heading({ subtitle, className, tag, align = "center", ...props }
       >
         {tag ? <Tag>{tag}</Tag> : null}
         {subtitle && (
-          <motion.p
+          <m.p
             className={clsx("max-w-screen-md text-pretty text-lg font-light text-muted-foreground md:text-xl", {
               "text-center": align === "center",
               "text-left": align === "left",
@@ -66,9 +66,9 @@ export function Heading({ subtitle, className, tag, align = "center", ...props }
             variants={FADE_UP_ANIMATION_VARIANTS}
           >
             {subtitle}
-          </motion.p>
+          </m.p>
         )}
-        <motion.div
+        <m.div
           className={clsx("flex max-w-[800px] flex-col justify-center gap-1", {
             "items-start self-start": align === "left",
             "items-center self-center": align === "center" || !align,
@@ -84,8 +84,8 @@ export function Heading({ subtitle, className, tag, align = "center", ...props }
             })}
             {...props}
           />
-        </motion.div>
-      </motion.div>
+        </m.div>
+      </m.div>
     </div>
   )
 }

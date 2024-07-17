@@ -1,7 +1,7 @@
 "use client"
 
 import { usePathname } from "@/navigation"
-import { motion, AnimatePresence } from "framer-motion"
+import { m, AnimatePresence } from "framer-motion"
 import { useLocale } from "next-intl"
 import { LayoutRouterContext } from "next/dist/shared/lib/app-router-context.shared-runtime"
 import { useContext, useRef } from "react"
@@ -30,7 +30,7 @@ const PageTransitionEffect = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <AnimatePresence mode="popLayout">
-      <motion.div
+      <m.div
         key={locale + pathname}
         initial="hidden"
         animate="enter"
@@ -39,7 +39,7 @@ const PageTransitionEffect = ({ children }: { children: React.ReactNode }) => {
         transition={{ ease: "easeInOut", duration: 0.3 }}
       >
         <FrozenRouter>{children}</FrozenRouter>
-      </motion.div>
+      </m.div>
     </AnimatePresence>
   )
 }

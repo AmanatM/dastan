@@ -1,4 +1,3 @@
-"use client"
 import { Button } from "@/components/ui/button"
 import {
   CredenzaContent,
@@ -9,6 +8,7 @@ import {
   CredenzaFooter,
   CredenzaClose,
 } from "@/components/ui/credenza"
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import { useTranslations } from "next-intl"
 
 function ReadMore() {
@@ -20,15 +20,15 @@ function ReadMore() {
         <CredenzaDescription className="hidden">{t("Biography.subtitle")}</CredenzaDescription>
       </CredenzaHeader>
       <CredenzaBody>
-        <div className="h-[400px] overflow-auto">
+        <ScrollArea className="h-[400px] overflow-auto">
           <div className="space-y-3 p-3">
             <p>{t("Biography.readMore.paragraph1")}</p>
             <p>{t("Biography.readMore.paragraph2")}</p>
             <p>{t("Biography.readMore.paragraph3")}</p>
             <p>{t("Biography.readMore.paragraph4")}</p>
           </div>
-          {/* <ScrollBar orientation="horizontal" /> */}
-        </div>
+          <ScrollBar orientation="horizontal" />
+        </ScrollArea>
       </CredenzaBody>
       <CredenzaFooter>
         <CredenzaClose asChild>
