@@ -38,11 +38,10 @@ const featuresCardsList = [
 export function FeaturesList({ heading }: FeatureCard) {
   return (
     <Section container="default">
-      {heading && (
-        <Heading subtitle={heading.subtitle}>
-          <h4>{heading.title}</h4>
-        </Heading>
-      )}
+      {/* <Heading tag={"Subtitle"}>
+        <h4>{"Title"}</h4>
+      </Heading> */}
+
       <div className="flex flex-col gap-6">
         {featuresCardsList.map(card => (
           <article

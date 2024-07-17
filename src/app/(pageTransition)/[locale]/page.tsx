@@ -2,7 +2,6 @@ import { Companies } from "@/components/sections/companies"
 
 import Biography from "@/components/sections/biography"
 import { unstable_setRequestLocale } from "next-intl/server"
-import { featuresCardsList } from "@/config/home"
 import { Newsletter } from "@/components/newsletter"
 import PublicationsSlider from "@/components/sections/publicationsSlider"
 import Hero from "@/components/sections/hero"
