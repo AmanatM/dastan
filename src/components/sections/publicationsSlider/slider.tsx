@@ -6,11 +6,8 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons"
 import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures"
 
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { PublicationItem } from "./data"
-import demoImage from "@public/images/testimonials/author.avif"
-import { platform } from "os"
 import { YoutubeIcon } from "@/icons/platform-icons"
 
 export function Slider({ publications, children }: { publications: PublicationItem[]; children: React.ReactNode }) {
@@ -140,9 +137,7 @@ export function VainillaCard({ item }: { item: PublicationItem }) {
         <div className="flex items-center gap-4 pl-5">
           <div className="dark:border-dark-border flex flex-1 items-center gap-5 border-r border-border py-2">
             <div className="flex flex-1 flex-col">
-              <p className="text-pretty text-sm text-muted-foreground md:text-base">
-                {new Date(item.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
-              </p>
+              <p className="text-pretty text-sm text-muted-foreground md:text-base">{item.date}</p>
             </div>
           </div>
           <div className="pr-5">
