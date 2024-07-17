@@ -1,4 +1,3 @@
-import { ThemeSwitcher } from "../theme-switcher"
 import { Link } from "@/navigation"
 
 import { LogoIcon } from "@/icons/logo-icons"

@@ -27,6 +27,7 @@ const languages: Record<string, Language> = {
   },
 }
 
+// eslint-disable-next-line no-unused-vars
 function LocaleSelector({ setNavOpened }: { setNavOpened?: (value: boolean) => void }) {
   const router = useRouter()
   const [isPending, startTransition] = useTransition()

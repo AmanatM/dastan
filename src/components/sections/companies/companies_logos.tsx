@@ -1,4 +1,4 @@
-export const KyrgyzFundLogo = ({ size }: { size?: number }) => {
+export const KyrgyzFundLogo = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="43" viewBox="0 0 40 43">
       <path
@@ -13,7 +13,7 @@ export const KyrgyzFundLogo = ({ size }: { size?: number }) => {
   )
 }
 
-export const QoorchaqLogo = ({ size }: { size?: number }) => {
+export const QoorchaqLogo = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="42">
       <path

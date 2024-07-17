@@ -1,7 +1,5 @@
 "use client"
-import { cn } from "@/lib/utils"
-import { Menu } from "lucide-react"
-import { Button, buttonVariants } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Sheet,
   SheetClose,
@@ -27,7 +25,6 @@ export function MobileMenu() {
     setNavOpened(prev => !prev)
   }
 
-  const t = useTranslations("Navigation")
   const navigationItems = useTranslations("Navigation.nav_items")
   const navMeta = useTranslations("Navigation.meta")
 

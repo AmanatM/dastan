@@ -1,18 +1,8 @@
-import { Heading, HeadingProps } from "@/components/common/heading"
 import { Section } from "@/components/common/layout"
-import { CheckIcon } from "@radix-ui/react-icons"
 import Image from "next/image"
 
 import un_image from "@public/images/un.jpeg"
 import professor_image from "@public/images/professor.jpeg"
-
-type FeatureCard = {
-  heading?: {
-    title: string
-    subtitle: string
-    tag: string
-  }
-}
 
 const featuresCardsList = [
   {
@@ -35,7 +25,7 @@ const featuresCardsList = [
   },
 ]
 
-export function FeaturesList({ heading }: FeatureCard) {
+export function FeaturesList() {
   return (
     <Section container="default">
       {/* <Heading tag={"Subtitle"}>

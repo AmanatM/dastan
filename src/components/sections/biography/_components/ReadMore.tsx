@@ -9,7 +9,6 @@ import {
   CredenzaFooter,
   CredenzaClose,
 } from "@/components/ui/credenza"
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import { useTranslations } from "next-intl"
 
 function ReadMore() {

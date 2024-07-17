@@ -1,7 +1,6 @@
 import { Heading } from "@/components/common/heading"
 import { Section } from "@/components/common/layout"
 import { buttonVariants } from "@/components/ui/button"
-import { ButtonLink } from "@/components/ui/button-link"
 import { cn } from "@/lib/utils"
 import { Link } from "@/navigation"
 import { useTranslations } from "next-intl"
