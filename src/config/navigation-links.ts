@@ -1,5 +1,5 @@
 type MainNav = {
-  titleKey: string
+  titleKey: "bio" | "about" | "speaking" | "news" | "contact"
   href: string
 }
 

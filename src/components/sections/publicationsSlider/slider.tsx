@@ -1,6 +1,5 @@
 "use client"
 import { type EmblaCarouselType } from "embla-carousel"
-import useEmblaCarousel from "embla-carousel-react"
 import * as React from "react"
 import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons"
 import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures"
@@ -9,6 +8,8 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { PublicationItem } from "./data"
 import { YoutubeIcon } from "@/icons/platform-icons"
+
+import useEmblaCarousel from "embla-carousel-react"
 
 export function Slider({ publications, children }: { publications: PublicationItem[]; children: React.ReactNode }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(

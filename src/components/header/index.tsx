@@ -7,8 +7,9 @@ import LocaleSelector from "./locale-selector"
 import { useMotionValueEvent, useScroll } from "framer-motion"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
+import { useTranslations } from "next-intl"
 
-export function Header() {
+export function Header({ navigationItems, navMeta }: any) {
   const [scrolled, setScrolled] = useState(false)
   const { scrollY } = useScroll()
 
@@ -34,7 +35,7 @@ export function Header() {
           <div className="flex items-center gap-x-8">
             <SocialIcons className="hidden md:flex" />
             <LocaleSelector />
-            <MobileMenu />
+            <MobileMenu navMeta={navMeta} navigationItems={navigationItems} />
           </div>
         </div>
       </div>

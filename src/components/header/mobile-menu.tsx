@@ -18,15 +18,12 @@ import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons"
 import { useTranslations } from "next-intl"
 import { Link } from "@/navigation"
 
-export function MobileMenu() {
+export function MobileMenu({ navigationItems, navMeta }: any) {
   const [navOpened, setNavOpened] = useState(false)
 
   const toggleNav = () => {
     setNavOpened(prev => !prev)
   }
-
-  const navigationItems = useTranslations("Navigation.nav_items")
-  const navMeta = useTranslations("Navigation.meta")
 
   return (
     <Sheet open={navOpened} onOpenChange={toggleNav}>
@@ -48,8 +45,8 @@ export function MobileMenu() {
         id="main-menu"
       >
         <SheetHeader className="hidden">
-          <SheetTitle>{navMeta("title")}</SheetTitle>
-          <SheetDescription>{navMeta("description")}</SheetDescription>
+          <SheetTitle>{navMeta.title}</SheetTitle>
+          <SheetDescription>{navMeta.description}</SheetDescription>
         </SheetHeader>
         <div className="container mx-auto flex w-full items-center justify-between px-4">
           <Link href={"/"} className="mr-5 flex w-[130px] items-center md:w-auto">
@@ -69,7 +66,7 @@ export function MobileMenu() {
         <div className="flex flex-row flex-wrap space-y-4 pt-4">
           {mainNav.map((link, index) => (
             <Link key={index} href={link.href} onClick={toggleNav} className={"w-full justify-start px-2"}>
-              {navigationItems(link.titleKey as "home" | "bio" | "about" | "speaking" | "news" | "contact")}
+              {navigationItems[index]}
             </Link>
           ))}
         </div>
