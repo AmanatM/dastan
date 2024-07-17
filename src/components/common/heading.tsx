@@ -101,8 +101,8 @@ export function Tag({
   return (
     <Comp
       className={cn(
-        "flex min-h-7 items-center justify-center gap-2 rounded-full bg-muted px-3.5 pb-px text-sm font-medium text-muted-foreground md:text-base",
-        "bg-gradient-to-l from-orange-500 to-amber-500 bg-clip-text text-transparent dark:from-blue-400 dark:to-violet-400",
+        "flex min-h-7 items-center justify-center gap-2 rounded-full bg-muted pb-px text-sm font-medium text-muted-foreground md:text-base",
+        "bg-gradient-to-l from-blue-600 to-violet-500 bg-clip-text text-sm font-medium text-transparent dark:from-blue-400 dark:to-violet-400",
         className,
       )}
       {...props}

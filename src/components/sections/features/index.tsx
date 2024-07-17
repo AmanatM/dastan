@@ -8,11 +8,11 @@ const featuresCardsList = [
   {
     image: {
       src: professor_image,
-      alt: "Harvard Business School",
+      alt: "Kyrgyz fund program",
     },
-    title: "At 22, he completed the professional education program at Harvard Business School (HBS)",
+    title: "Kyrgyz Fund Program",
     content:
-      "We have a team of United Nations speakers who are experts in their fields and can provide you with the best advice on how to achieve your goals.",
+      "A program for young entrepreneurs who want to start their own business. We provide you with the tools and resources you need to succeed.",
   },
   {
     image: {
@@ -48,7 +48,7 @@ export default function FeaturesList() {
               />
             </figure>
             <div className="flex flex-col gap-8 p-5 pt-6 md:flex-1 md:p-10">
-              <div className="flex flex-col items-start gap-2">
+              <div className="flex flex-col items-start gap-y-5">
                 <h5 className="text-text-primary dark:text-dark-text-primary text-2xl font-medium md:text-3xl">
                   {card.title}
                 </h5>
