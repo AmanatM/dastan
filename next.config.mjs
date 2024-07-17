@@ -9,24 +9,7 @@ const withNextIntl = createNextIntlPlugin()
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    optimizePackageImports: [
-      "@radix-ui/react-avatar",
-      "@radix-ui/react-dialog",
-      "@radix-ui/react-dropdown-menu",
-      "@radix-ui/react-icons",
-      "@radix-ui/react-scroll-area",
-      "@radix-ui/react-select",
-      "@radix-ui/react-separator",
-      "@radix-ui/react-slot",
-      "@vercel/analytics",
-      "@vercel/speed-insights",
-      "embla-carousel-autoplay",
-      "embla-carousel-react",
-      "embla-carousel-wheel-gestures",
-      "vaul",
-    ],
-  },
+  reactStrictMode: true,
 }
 
 export default withBundleAnalyzer(withNextIntl(nextConfig))

@@ -64,7 +64,13 @@ export function MobileMenu({ navigationItems, navMeta }: any) {
         <Separator />
         <div className="flex flex-row flex-wrap space-y-4 pt-4">
           {mainNav.map((link, index) => (
-            <Link key={index} href={link.href} onClick={toggleNav} className={"w-full justify-start px-2"}>
+            <Link
+              key={index}
+              href={link.href}
+              onClick={toggleNav}
+              prefetch={false}
+              className={"w-full justify-start px-2"}
+            >
               {navigationItems[index]}
             </Link>
           ))}

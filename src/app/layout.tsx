@@ -1,6 +1,7 @@
 import { ReactNode } from "react"
-import "./globals.css"
 import { Metadata } from "next"
+
+import "./globals.css"
 
 type Props = {
   children: ReactNode
