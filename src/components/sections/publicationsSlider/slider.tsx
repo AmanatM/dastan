@@ -1,5 +1,4 @@
 "use client"
-import { type EmblaCarouselType } from "embla-carousel"
 import * as React from "react"
 import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons"
 import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures"
@@ -9,7 +8,7 @@ import { cn } from "@/lib/utils"
 import { PublicationItem } from "./data"
 import { YoutubeIcon } from "@/icons/platform-icons"
 
-import useEmblaCarousel from "embla-carousel-react"
+import useEmblaCarousel, { UseEmblaCarouselType } from "embla-carousel-react"
 
 export function Slider({ publications, children }: { publications: PublicationItem[]; children: React.ReactNode }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -35,11 +34,11 @@ export function Slider({ publications, children }: { publications: PublicationIt
     [emblaApi],
   )
 
-  const onInit = React.useCallback((emblaApi: EmblaCarouselType) => {
+  const onInit = React.useCallback((emblaApi: { scrollSnapList: () => React.SetStateAction<number[]> }) => {
     setScrollSnaps(emblaApi.scrollSnapList())
   }, [])
 
-  const onSelect = React.useCallback((emblaApi: EmblaCarouselType) => {
+  const onSelect = React.useCallback((emblaApi: { selectedScrollSnap: () => React.SetStateAction<number> }) => {
     setSelectedIndex(emblaApi.selectedScrollSnap())
   }, [])
 
