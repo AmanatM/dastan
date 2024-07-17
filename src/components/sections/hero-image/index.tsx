@@ -16,7 +16,7 @@ export function HeroImage() {
           <Image
             src={heroImage}
             alt={t("Global.name")}
-            priority={true}
+            priority
             placeholder="blur"
             fill
             style={{

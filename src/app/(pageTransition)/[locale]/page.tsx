@@ -3,6 +3,10 @@ import { HeroImage } from "@/components/sections/hero-image"
 
 import Biography from "@/components/sections/biography"
 import { unstable_setRequestLocale } from "next-intl/server"
+import { FeaturesList } from "@/components/sections/features/features-list"
+import { featuresCardsList } from "@/config/home"
+import { Newsletter } from "@/components/newsletter"
+import PublicationsSlider from "@/components/sections/publicationsSlider"
 
 export default function Home({ params: { locale } }: { params: { locale: string } }) {
   unstable_setRequestLocale(locale)
@@ -12,7 +16,6 @@ export default function Home({ params: { locale } }: { params: { locale: string 
       <Companies />
       <Biography />
 
-      {/* 
       <FeaturesList
         heading={{
           title: "Enhanced Team Communication",
@@ -22,15 +25,14 @@ export default function Home({ params: { locale } }: { params: { locale: string 
         }}
         featuresCardsList={featuresCardsList}
       />
-      <Testimonials
+      <PublicationsSlider
         heading={{
-          title: "What our clients say",
+          title: "NEWS & PUBLICATIONS",
           subtitle: undefined,
           align: "center",
         }}
-        quotes={homeTestimonials}
       />
-      <Newsletter /> */}
+      {/* <Newsletter /> */}
     </div>
   )
 }
