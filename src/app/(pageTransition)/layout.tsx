@@ -16,7 +16,7 @@ const inter = Inter({
 
 export default function PageTransitionLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html className={`scroll-smooth ${inter.variable}`}>
+    <html className={`scroll-smooth ${inter.variable}`} suppressHydrationWarning>
       <body className={cn("min-h-svh max-w-[100vw]")}>
         <PageTransitionEffect>{children}</PageTransitionEffect>
         <Analytics />
