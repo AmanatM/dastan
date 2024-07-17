@@ -25,7 +25,7 @@ const featuresCardsList = [
   },
 ]
 
-export function FeaturesList() {
+export default function FeaturesList() {
   return (
     <Section container="default">
       {/* <Heading tag={"Subtitle"}>

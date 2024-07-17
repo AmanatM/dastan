@@ -1,4 +1,3 @@
-import { MessageKeys, useTranslations } from "next-intl"
 import { getTranslations } from "next-intl/server"
 import { unstable_setRequestLocale } from "next-intl/server"
 
@@ -26,7 +25,7 @@ export function generateStaticParams() {
   return locales.map(locale => ({ locale }))
 }
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params: { locale },
 }: {
@@ -35,7 +34,7 @@ export default function LocaleLayout({
 }) {
   unstable_setRequestLocale(locale)
 
-  const t = useTranslations("Navigation")
+  const t = await getTranslations({ locale, namespace: "Navigation" })
 
   const navigationItems = mainNav.map(item => t(`nav_items.${item.titleKey}`))
   const navMeta = {

@@ -1,13 +1,16 @@
 import { unstable_setRequestLocale } from "next-intl/server"
+import dynamic from "next/dynamic"
 
-import Biography from "@/components/sections/biography"
-import PublicationsSlider from "@/components/sections/publicationsSlider"
 import Hero from "@/components/sections/hero"
-import { FeaturesList } from "@/components/sections/features"
 import { Companies } from "@/components/sections/companies"
 
 export default function Home({ params: { locale } }: { params: { locale: string } }) {
   unstable_setRequestLocale(locale)
+
+  const Biography = dynamic(() => import("@/components/sections/biography"))
+  const FeaturesList = dynamic(() => import("@/components/sections/features"))
+  const PublicationsSlider = dynamic(() => import("@/components/sections/publicationsSlider"))
+
   return (
     <div>
       <Hero />

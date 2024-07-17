@@ -7,7 +7,6 @@ import LocaleSelector from "./locale-selector"
 import { useMotionValueEvent, useScroll } from "framer-motion"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
-import { useTranslations } from "next-intl"
 
 export function Header({ navigationItems, navMeta }: any) {
   const [scrolled, setScrolled] = useState(false)

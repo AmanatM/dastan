@@ -15,7 +15,6 @@ import { LogoIcon } from "@/icons/logo-icons"
 import LocaleSelector from "./locale-selector"
 import { Separator } from "../ui/separator"
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons"
-import { useTranslations } from "next-intl"
 import { Link } from "@/navigation"
 
 export function MobileMenu({ navigationItems, navMeta }: any) {
