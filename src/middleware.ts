@@ -10,15 +10,20 @@ export default createMiddleware({
 
 export const config = {
   matcher: [
-    // Enable a redirect to a matching locale at the root
-    "/",
+    // Match all pathnames except for
+    // - … if they start with `/api`, `/_next` or `/_vercel`
+    // - … the ones containing a dot (e.g. `favicon.ico`)
+    "/((?!api|_next|_vercel|.*\\..*).*)",
 
-    // Set a cookie to remember the previous locale for
-    // all requests that have a locale prefix
-    "/(ru|en|ky)/:path*",
+    // // Enable a redirect to a matching locale at the root
+    // "/",
 
-    // Enable redirects that add missing locales
-    // (e.g. `/pathnames` -> `/en/pathnames`)
-    "/((?!_next|_vercel|.*\\..*).*)",
+    // // Set a cookie to remember the previous locale for
+    // // all requests that have a locale prefix
+    // "/(ru|en|ky)/:path*",
+
+    // // Enable redirects that add missing locales
+    // // (e.g. `/pathnames` -> `/en/pathnames`)
+    // "/((?!_next|_vercel|.*\\..*).*)",
   ],
 }
