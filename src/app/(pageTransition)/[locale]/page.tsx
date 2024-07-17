@@ -1,10 +1,10 @@
-import { Companies } from "@/components/sections/companies"
+import { unstable_setRequestLocale } from "next-intl/server"
 
 import Biography from "@/components/sections/biography"
-import { unstable_setRequestLocale } from "next-intl/server"
 import PublicationsSlider from "@/components/sections/publicationsSlider"
 import Hero from "@/components/sections/hero"
 import { FeaturesList } from "@/components/sections/features"
+import { Companies } from "@/components/sections/companies"
 
 export default function Home({ params: { locale } }: { params: { locale: string } }) {
   unstable_setRequestLocale(locale)
