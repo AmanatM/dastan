@@ -22,9 +22,16 @@ const ImageSliderBackground = ({ images, options }: PropType) => {
     <div className="h-4/5 w-full overflow-hidden md:h-full" ref={emblaRef}>
       <div className="relative flex h-full w-full">
         {images.map((image, index) => (
-          <div key={index} className="w-full flex-shrink-0 flex-grow-0">
+          <div key={index} className="relative w-full flex-shrink-0 flex-grow-0">
             <div className="absolute inset-0 z-10 bg-black/30"></div>
-            <Image src={image.src} alt={image.alt} placeholder="blur" fill={true} style={{ objectFit: "cover" }} />
+            <Image
+              src={image.src}
+              alt={image.alt}
+              placeholder="blur"
+              priority={index === 0}
+              fill={true}
+              style={{ objectFit: "cover" }}
+            />
           </div>
         ))}
       </div>
