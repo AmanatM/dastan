@@ -7,6 +7,7 @@ import ImageSliderBackground from "./_components/imageSliderBackground"
 
 import heroImage from "@public/images/hero/hero.jpg"
 import heroImage2 from "@public/images/un.jpeg"
+import { cn } from "@/lib/utils"
 
 const sliderImages = [
   {
@@ -26,7 +27,12 @@ export default function Hero() {
       <div className="flex size-full flex-col md:flex-row">
         <ImageSliderBackground images={sliderImages} />
 
-        <div className="absolute bottom-0 right-0 flex w-full items-center justify-start bg-background/95 p-1 py-8 text-center backdrop-blur-2xl supports-[backdrop-filter]:bg-background/60 md:h-full md:w-2/6 md:p-6">
+        <div
+          className={cn(
+            "absolute bottom-0 right-0 flex w-full items-center justify-start bg-background/60 p-1 py-5 text-center md:h-full md:w-2/6 md:p-6",
+            "backdrop-blur-2xl backdrop-brightness-125 backdrop-saturate-100 zoom-in-150 supports-[backdrop-filter]:bg-background/40",
+          )}
+        >
           <MotionDiv
             className="flex w-full flex-col items-start justify-center gap-y-4"
             initial="hidden"
@@ -42,7 +48,7 @@ export default function Hero() {
             }}
           >
             <MotionH1
-              className="flex self-center text-nowrap text-center text-[10vw] font-bold uppercase md:hidden"
+              className="flex self-center text-nowrap text-center text-[11vw] font-bold uppercase md:hidden"
               variants={FADE_UP_ANIMATION_VARIANTS}
             >
               {t("Global.name")}
@@ -59,7 +65,7 @@ export default function Hero() {
       </div>
 
       <MotionDiv
-        className="absolute bottom-0 left-0 right-0 hidden max-w-full text-nowrap text-center font-bold uppercase md:block"
+        className="absolute -bottom-2 left-0 right-0 hidden max-w-full text-nowrap text-center font-bold uppercase md:block"
         initial="hidden"
         animate="show"
         viewport={{ once: true }}
