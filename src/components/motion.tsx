@@ -1,9 +1,9 @@
 "use client"
 
-import { m } from "framer-motion"
+import { motion } from "framer-motion"
 
-export const MotionDiv = m.div
-export const MotionButton = m.button
-export const MotionH1 = m.h1
+export const MotionDiv = motion.div
+export const MotionButton = motion.button
+export const MotionH1 = motion.h1
 
-export const MotionPath = m.path
+export const MotionPath = motion.path

@@ -20,9 +20,7 @@ export default function PageTransitionLayout({ children }: { children: React.Rea
   return (
     <html className={`scroll-smooth ${inter.variable}`} suppressHydrationWarning>
       <body className={cn("min-h-svh max-w-[100vw]")}>
-        <MotionProvider>
-          <PageTransitionEffect>{children}</PageTransitionEffect>
-        </MotionProvider>
+        <PageTransitionEffect>{children}</PageTransitionEffect>
 
         <Analytics />
         <SpeedInsights />

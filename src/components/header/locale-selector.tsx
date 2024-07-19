@@ -4,7 +4,7 @@ import { useTransition, useState, useEffect } from "react"
 import { locales } from "@/config"
 import { useLocale } from "next-intl"
 import { KGFlagIcon, RUFlagIcon, USFlagIcon } from "@/icons/flag-icons"
-import { AnimatePresence, m } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import { usePathname, useRouter } from "@/navigation"
 
 type Language = {
@@ -53,7 +53,7 @@ function LocaleSelector({ setNavOpened }: { setNavOpened?: (value: boolean) => v
       <SelectTrigger className="!focus:ring-0 !selection:ring-0 border-none bg-transparent uppercase !ring-0">
         <SelectValue>
           <AnimatePresence mode="popLayout" initial={false}>
-            <m.div
+            <motion.div
               key={value}
               className="flex items-center gap-x-2"
               initial={{ opacity: 0 }}
@@ -62,7 +62,7 @@ function LocaleSelector({ setNavOpened }: { setNavOpened?: (value: boolean) => v
               transition={{ ease: "easeInOut", duration: 0.3 }}
             >
               {languages[value].icon} {languages[value].name}
-            </m.div>
+            </motion.div>
           </AnimatePresence>
         </SelectValue>
       </SelectTrigger>
