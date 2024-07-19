@@ -1,7 +1,6 @@
-import { locales } from "./config"
 import { MetadataRoute } from "next"
 import { BASE_URL } from "@/lib/constants"
-import { defaultLocale } from "@/config"
+import { defaultLocale, locales } from "@/config"
 
 // Adapt this as necessary
 const pathnames = ["/", "/about"]
