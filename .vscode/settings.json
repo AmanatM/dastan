@@ -6,5 +6,15 @@
   "i18n-ally.editor.preferEditor": true,
   "i18n-ally.enabledFrameworks": ["next-intl"],
   "i18n-ally.keystyle": "nested",
-  "vercelVSCode.projectId": "prj_KNv9mIQxeD63taSpSfj0J36CB3da"
+  "vercelVSCode.projectId": "prj_KNv9mIQxeD63taSpSfj0J36CB3da",
+  "emmet.preferences": {},
+  "emmet.includeLanguages": {
+    "\"javascript\"": "\"javascriptreact\"",
+    "\"typescript\"": "\"typescriptreact\""
+  },
+  "eslint.ignoreUntitled": false,
+  "tailwindCSS.experimental.configFile": null,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
 }

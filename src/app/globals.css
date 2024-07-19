@@ -33,18 +33,12 @@
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
-  }
-}
 
-@layer base {
-  :root {
     --header-height: 65px;
     --text-gradient: linear-gradient(180deg, #fff, #adadad);
     --radius: 0.5rem;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
