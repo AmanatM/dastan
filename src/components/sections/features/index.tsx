@@ -3,6 +3,10 @@ import Image from "next/image"
 
 import un_image from "@public/images/un.jpeg"
 import professor_image from "@public/images/professor.jpeg"
+import { Button } from "@/components/ui/button"
+import { Credenza, CredenzaTrigger } from "@/components/ui/credenza"
+import { useTranslations } from "next-intl"
+import { ReadMoreFund } from "./_components/readMore_Fund"
 
 const featuresCardsList = [
   {
@@ -17,15 +21,26 @@ const featuresCardsList = [
   {
     image: {
       src: un_image,
-      alt: "United Nations",
+      alt: "Scholarship program",
     },
-    title: "United Nations Speakers",
+    title: "Scholarship Program",
     content:
-      "We have a team of United Nations speakers who are experts in their fields and can provide you with the best advice on how to achieve your goals.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+  },
+  {
+    image: {
+      src: professor_image,
+      alt: "Economic Development Program",
+    },
+    title: "Economic Development Program",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
   },
 ]
 
 export default function FeaturesList() {
+  const t = useTranslations()
+
   return (
     <Section container="default">
       {/* <Heading tag={"Subtitle"}>
@@ -48,7 +63,7 @@ export default function FeaturesList() {
               />
             </figure>
             <div className="flex flex-col gap-8 p-5 pt-6 md:flex-1 md:p-10">
-              <div className="flex flex-col items-start gap-y-5">
+              <div className="flex flex-col items-start gap-y-5 md:gap-y-10">
                 <h5 className="text-text-primary dark:text-dark-text-primary text-2xl font-medium md:text-3xl">
                   {card.title}
                 </h5>
@@ -56,6 +71,14 @@ export default function FeaturesList() {
                   {card.content}
                 </p>
               </div>
+              <Credenza>
+                <CredenzaTrigger asChild>
+                  <Button size={"lg"} className="self-start text-lg">
+                    {t("Global.readMore")}
+                  </Button>
+                </CredenzaTrigger>
+                <ReadMoreFund />
+              </Credenza>
             </div>
           </article>
         ))}

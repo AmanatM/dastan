@@ -14,7 +14,7 @@ import { mainNav } from "@/config/navigation-links"
 import { LogoIcon } from "@/icons/logo-icons"
 import LocaleSelector from "./locale-selector"
 import { Separator } from "../ui/separator"
-import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons"
+import { Cross1Icon, ExternalLinkIcon, HamburgerMenuIcon } from "@radix-ui/react-icons"
 import { Link } from "@/navigation"
 
 export function MobileMenu({ navigationItems, navMeta }: any) {
@@ -74,6 +74,15 @@ export function MobileMenu({ navigationItems, navMeta }: any) {
               {navigationItems[index]}
             </Link>
           ))}
+          <Link
+            href={"https://cv.dastanabikov.com/"}
+            target="_blank"
+            prefetch={false}
+            className={"flex w-full items-center justify-start px-2 text-muted-foreground"}
+          >
+            Business Card
+            <ExternalLinkIcon className="ml-1 h-4 w-4" />
+          </Link>
         </div>
       </SheetContent>
     </Sheet>
