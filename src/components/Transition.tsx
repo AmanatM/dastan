@@ -29,7 +29,7 @@ const PageTransitionEffect = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname()
 
   return (
-    <AnimatePresence mode="popLayout">
+    <AnimatePresence mode="popLayout" initial={false}>
       <m.div
         key={locale + pathname}
         initial="hidden"
