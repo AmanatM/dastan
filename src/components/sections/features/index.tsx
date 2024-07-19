@@ -1,12 +1,14 @@
 import { Section } from "@/components/common/layout"
 import Image from "next/image"
 
-import un_image from "@public/images/un.jpeg"
-import professor_image from "@public/images/professor.jpeg"
 import { Button } from "@/components/ui/button"
 import { Credenza, CredenzaTrigger } from "@/components/ui/credenza"
 import { useTranslations } from "next-intl"
 import { ReadMoreFund } from "./_components/readMore_Fund"
+
+import un_image from "@public/images/un.jpeg"
+import professor_image from "@public/images/professor.jpeg"
+import economy_image from "@public/images/economic.jpg"
 
 const featuresCardsList = [
   {
@@ -29,7 +31,7 @@ const featuresCardsList = [
   },
   {
     image: {
-      src: professor_image,
+      src: economy_image,
       alt: "Economic Development Program",
     },
     title: "Economic Development Program",
