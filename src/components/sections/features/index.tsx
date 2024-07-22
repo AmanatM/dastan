@@ -2,14 +2,14 @@ import { Section } from "@/components/common/layout"
 import Image from "next/image"
 
 import { Button } from "@/components/ui/button"
-import { Credenza, CredenzaTrigger } from "@/components/ui/credenza"
 import { useTranslations } from "next-intl"
 import { ReadMoreFund } from "./_components/readMore_Fund"
 
-import un_image from "@public/images/un.jpeg"
+import { Dialog, DialogTrigger } from "@/components/ui/dialog"
+
+import un_image from "@public/images/hero/un.jpg"
 import professor_image from "@public/images/professor.jpeg"
 import economy_image from "@public/images/economic.jpg"
-import { Dialog, DialogTrigger } from "@/components/ui/dialog"
 
 const featuresCardsList = [
   {

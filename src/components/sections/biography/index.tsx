@@ -3,12 +3,12 @@ import { Section } from "@/components/common/layout"
 import ImageCarousel from "@/components/ImageCarousel"
 import { Button } from "@/components/ui/button"
 
-import slider1 from "./images/childhood.jpg"
-import slider2 from "./images/certificate.jpg"
 import { useTranslations } from "next-intl"
 import ReadMore from "./_components/ReadMore"
-import { Drawer, DrawerTrigger } from "@/components/ui/drawer"
 import { Dialog, DialogTrigger } from "@/components/ui/dialog"
+
+import slider1 from "@public/images/biography/childhood.jpg"
+import slider2 from "@public/images/biography/certificate.jpg"
 
 export default function Biography() {
   const t = useTranslations()

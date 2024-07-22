@@ -4,10 +4,10 @@ import { FADE_UP_ANIMATION_VARIANTS } from "@/config/motion-animations"
 
 import { MotionDiv, MotionH1 } from "@/components/motion"
 import ImageSliderBackground from "./_components/imageSliderBackground"
-
-import heroImage from "@public/images/hero/hero-min.webp"
-import heroImage2 from "@public/images/un.jpeg"
 import { cn } from "@/lib/utils"
+
+import heroImage from "@public/images/hero/un.jpg"
+import heroImage2 from "@public/images/hero/hero-min.webp"
 
 const sliderImages = [
   {
