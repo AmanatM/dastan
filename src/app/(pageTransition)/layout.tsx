@@ -5,6 +5,7 @@ import PageTransitionEffect from "@/components/Transition"
 
 import { Inter } from "next/font/google"
 import { cn } from "@/lib/utils"
+import { Toaster } from "@/components/ui/sonner"
 
 const inter = Inter({
   subsets: ["latin", "cyrillic", "cyrillic-ext"],
@@ -19,7 +20,7 @@ export default function PageTransitionLayout({ children }: { children: React.Rea
     <html className={`scroll-smooth ${inter.variable}`} suppressHydrationWarning>
       <body className={cn("min-h-svh max-w-[100vw]")}>
         <PageTransitionEffect>{children}</PageTransitionEffect>
-
+        <Toaster richColors={true} />
         <Analytics />
         <SpeedInsights />
       </body>

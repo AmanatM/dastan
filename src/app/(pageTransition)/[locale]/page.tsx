@@ -15,7 +15,6 @@ export default function Home({ params: { locale } }: { params: { locale: string 
       <Hero />
       <Companies />
       <Biography />
-
       <FeaturesList />
       <PublicationsSlider
         heading={{

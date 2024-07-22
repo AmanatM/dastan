@@ -16,21 +16,19 @@ function ReadMore() {
   return (
     <DialogContent className="max-w-2xl">
       <DialogHeader>
-        <DialogTitle className="uppercase">{t("Biography.subtitle")}</DialogTitle>
-        <DialogDescription className="hidden">{t("Biography.subtitle")}</DialogDescription>
+        <DialogTitle className="uppercase">Title</DialogTitle>
+        <DialogDescription className="hidden">Subtitle</DialogDescription>
       </DialogHeader>
       <ScrollArea className="h-[400px] overflow-auto">
         <div className="space-y-3 p-3">
-          <p>{t("Biography.readMore.paragraph1")}</p>
-          <p>{t("Biography.readMore.paragraph2")}</p>
-          <p>{t("Biography.readMore.paragraph3")}</p>
-          <p>{t("Biography.readMore.paragraph4")}</p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus nam illo itaque ex mollitia. Ad
+          distinctio quia qui, asperiores voluptas eaque incidunt unde atque fuga. Voluptates ipsum sequi itaque?
         </div>
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
       <DialogFooter>
         <DialogClose asChild>
-          <Button>{t("Global.close")}</Button>
+          <Button>Close</Button>
         </DialogClose>
       </DialogFooter>
     </DialogContent>

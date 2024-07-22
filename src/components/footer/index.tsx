@@ -10,7 +10,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border py-16 text-muted-foreground">
-      <div className="container mx-auto grid grid-flow-row place-items-start items-center gap-y-7 px-6 lg:grid-flow-col">
+      <div className="container mx-auto grid grid-flow-row place-items-start items-center gap-y-7 px-6">
         <Link aria-label="Homepage" href="/" className="place-self-center">
           <LogoIcon />
         </Link>
