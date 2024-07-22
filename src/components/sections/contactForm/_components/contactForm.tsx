@@ -63,7 +63,7 @@ export default function ContactForm() {
             control={form.control}
             name="name"
             render={({ field }) => (
-              <FormItem>
+              <FormItem className="col-span-2 md:col-span-1">
                 <FormControl>
                   <Input placeholder="Name" autoComplete="name" {...field} />
                 </FormControl>
@@ -76,7 +76,7 @@ export default function ContactForm() {
             control={form.control}
             name="email"
             render={({ field }) => (
-              <FormItem>
+              <FormItem className="col-span-2 md:col-span-1">
                 <FormControl>
                   <Input placeholder="Email" autoComplete="email" {...field} />
                 </FormControl>
