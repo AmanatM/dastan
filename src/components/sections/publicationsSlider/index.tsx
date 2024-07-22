@@ -13,7 +13,7 @@ type Props = {
 
 export default function PublicationsSlider({ heading }: Props) {
   return (
-    <div className="relative overflow-clip">
+    <div className="relative overflow-clip" id="news">
       <Section>
         <Slider publications={publications_data}>
           {heading.align === "none" ? (

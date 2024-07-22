@@ -43,10 +43,10 @@
   },
   "Navigation": {
     "nav_items": {
-      "home": "Home",
       "bio": "Biography",
-      "about": "About Dastan",
-      "speaking": "Speaking",
+      "kyrgyzFund": "Kyrgyz Fund",
+      "scholarshipProgramm": "Scholarship Programm",
+      "economicProgram": "Economic Program",
       "news": "News & Publications",
       "contact": "Contact"
     },

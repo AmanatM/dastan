@@ -43,12 +43,12 @@
   },
   "Navigation": {
     "nav_items": {
-      "home": "Главная",
       "bio": "Биография",
-      "about": "О Дастане",
-      "speaking": "Выступления",
       "news": "Новости и публикации",
-      "contact": "Контакты"
+      "contact": "Контакты",
+      "economicProgram": "Экономическая программа",
+      "kyrgyzFund": "Кыргызский фонд",
+      "scholarshipProgramm": "Стипендиальная программа"
     },
     "meta": {
       "title": "Меню",

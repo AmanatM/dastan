@@ -1,5 +1,5 @@
 type MainNav = {
-  titleKey: "bio" | "about" | "speaking" | "news" | "contact"
+  titleKey: "bio" | "kyrgyzFund" | "scholarshipProgramm" | "economicProgram" | "news" | "contact"
   href: string
 }
 
@@ -9,12 +9,16 @@ export const mainNav: MainNav[] = [
     href: "#biography",
   },
   {
-    titleKey: "about",
-    href: "#about",
+    titleKey: "kyrgyzFund",
+    href: "#kyrgyzFund",
   },
   {
-    titleKey: "speaking",
-    href: "#speaking",
+    titleKey: "scholarshipProgramm",
+    href: "#scholarshipProgram",
+  },
+  {
+    titleKey: "economicProgram",
+    href: "#economicProgram",
   },
   {
     titleKey: "news",

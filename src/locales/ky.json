@@ -43,12 +43,12 @@
   },
   "Navigation": {
     "nav_items": {
-      "about": "Дастан жөнүндө",
       "bio": "Өмүр баяны",
       "contact": "Байланыш",
-      "home": "Үй",
       "news": "Жаңылыктар",
-      "speaking": "Сүйлөө"
+      "economicProgram": "Экономикалык программа",
+      "kyrgyzFund": "Кыргыз фонду",
+      "scholarshipProgramm": "Стипендия программасы"
     },
     "meta": {
       "title": "Меню",

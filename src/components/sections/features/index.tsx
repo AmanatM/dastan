@@ -20,6 +20,7 @@ const featuresCardsList = [
     title: "Kyrgyz Fund Program",
     content:
       "A program for young entrepreneurs who want to start their own business. We provide you with the tools and resources you need to succeed.",
+    link: "kyrgyzFund",
   },
   {
     image: {
@@ -29,6 +30,7 @@ const featuresCardsList = [
     title: "Scholarship Program",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    link: "scholarshipProgram",
   },
   {
     image: {
@@ -38,6 +40,7 @@ const featuresCardsList = [
     title: "Economic Development Program",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    link: "economicProgram",
   },
 ]
 
@@ -46,14 +49,11 @@ export default function FeaturesList() {
 
   return (
     <Section container="default">
-      {/* <Heading tag={"Subtitle"}>
-        <h4>{"Title"}</h4>
-      </Heading> */}
-
       <div className="flex flex-col gap-6">
         {featuresCardsList.map(card => (
-          <article
+          <div
             key={card.title}
+            id={card.link}
             className="dark:border-dark-border dark:bg-dark-surface-secondary flex min-h-96 w-full max-w-full flex-col rounded-lg border border-border bg-card p-px sm:max-w-full md:w-full md:flex-row md:odd:flex-row-reverse xl:gap-16"
           >
             <figure className="p-2 md:h-auto md:w-[360px] lg:w-[480px] xl:w-[560px]">
@@ -83,7 +83,7 @@ export default function FeaturesList() {
                 <ReadMoreFund />
               </Dialog>
             </div>
-          </article>
+          </div>
         ))}
       </div>
     </Section>

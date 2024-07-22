@@ -66,7 +66,7 @@ export function MobileMenu({ navigationItems, navMeta }: any) {
           {mainNav.map((link, index) => (
             <Link
               key={index}
-              href={link.href}
+              href={"/" + link.href}
               onClick={toggleNav}
               prefetch={false}
               className={"w-full justify-start px-2"}
