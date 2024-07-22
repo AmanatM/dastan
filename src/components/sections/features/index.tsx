@@ -9,6 +9,7 @@ import { ReadMoreFund } from "./_components/readMore_Fund"
 import un_image from "@public/images/un.jpeg"
 import professor_image from "@public/images/professor.jpeg"
 import economy_image from "@public/images/economic.jpg"
+import { Dialog, DialogTrigger } from "@/components/ui/dialog"
 
 const featuresCardsList = [
   {
@@ -73,14 +74,14 @@ export default function FeaturesList() {
                   {card.content}
                 </p>
               </div>
-              <Credenza>
-                <CredenzaTrigger asChild>
+              <Dialog>
+                <DialogTrigger asChild>
                   <Button size={"lg"} className="self-start text-lg">
                     {t("Global.readMore")}
                   </Button>
-                </CredenzaTrigger>
+                </DialogTrigger>
                 <ReadMoreFund />
-              </Credenza>
+              </Dialog>
             </div>
           </article>
         ))}

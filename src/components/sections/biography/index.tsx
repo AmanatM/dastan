@@ -6,8 +6,9 @@ import { Button } from "@/components/ui/button"
 import slider1 from "./images/childhood.jpg"
 import slider2 from "./images/certificate.jpg"
 import { useTranslations } from "next-intl"
-import { Credenza, CredenzaTrigger } from "@/components/ui/credenza"
 import ReadMore from "./_components/ReadMore"
+import { Drawer, DrawerTrigger } from "@/components/ui/drawer"
+import { Dialog, DialogTrigger } from "@/components/ui/dialog"
 
 export default function Biography() {
   const t = useTranslations()
@@ -51,14 +52,14 @@ export default function Biography() {
             </div>
           ))}
         </div>
-        <Credenza>
-          <CredenzaTrigger asChild>
+        <Dialog>
+          <DialogTrigger asChild>
             <Button size={"lg"} className="self-start text-lg">
               {t("Global.readMore")}
             </Button>
-          </CredenzaTrigger>
+          </DialogTrigger>
           <ReadMore />
-        </Credenza>
+        </Dialog>
       </div>
     </Section>
   )

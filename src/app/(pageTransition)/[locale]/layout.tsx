@@ -45,11 +45,7 @@ export default async function LocaleLayout({
   return (
     <>
       <Header navigationItems={navigationItems} navMeta={navMeta} />
-      <main className="min-h-[calc(100svh-var(--header-height))]">
-        <div vaul-drawer-wrapper="" className="bg-background">
-          {children}
-        </div>
-      </main>
+      <main className="min-h-[calc(100svh-var(--header-height))] bg-background">{children}</main>
       <Footer />
     </>
   )
