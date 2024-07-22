@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl"
 
 export function Footer() {
   const t = useTranslations()
-  const navigationItems = useTranslations("Navigation.nav_items")
+  const navigationItems = mainNav.map(item => t(`Navigation.nav_items.${item.titleKey}`))
 
   return (
     <footer className="border-t border-border py-16 text-muted-foreground">
@@ -15,13 +15,13 @@ export function Footer() {
           <LogoIcon />
         </Link>
         <nav className="flex flex-col gap-x-2 gap-y-3 self-center sm:flex-row sm:items-center sm:place-self-center md:gap-x-4 lg:gap-x-8">
-          {mainNav.map(link => (
+          {mainNav.map((link, index) => (
             <Link
               key={link.titleKey}
               className="text-text-tertiary hover:text-text-primary dark:text-dark-text-secondary dark:hover:text-dark-text-primary px-2 font-light tracking-tight"
               href={link.href ?? "#"}
             >
-              {navigationItems(link.titleKey as "home" | "bio" | "about" | "speaking" | "news" | "contact")}
+              {navigationItems[index]}
             </Link>
           ))}
         </nav>
