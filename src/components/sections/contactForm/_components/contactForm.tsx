@@ -10,6 +10,7 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from "@/component
 
 import { toast } from "sonner"
 import { useState } from "react"
+import { Button } from "@/components/ui/button"
 
 const formSchema = z.object({
   name: z.string(),
@@ -26,13 +27,14 @@ export default function ContactForm() {
       name: "",
       email: "",
       message: "",
-      access_key: process.env.FORM_API,
+      access_key: "35b7e48e-06c4-40e6-b4e4-acacb29e8c17",
     },
   })
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setPending(true)
     const json = JSON.stringify(values)
+    console.log(json)
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -45,12 +47,13 @@ export default function ContactForm() {
 
     const result = await response.json()
     if (result.success) {
+      setPending(false)
       form.reset()
       toast.success("Form submitted successfully!")
     } else {
+      setPending(false)
       toast.error("Failed to submit the form. Please try again later.")
     }
-    setPending(false)
   }
   return (
     <Form {...form}>
@@ -62,7 +65,7 @@ export default function ContactForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="Name" {...field} />
+                  <Input placeholder="Name" autoComplete="name" {...field} />
                 </FormControl>
 
                 <FormMessage />
@@ -75,7 +78,7 @@ export default function ContactForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="Email" {...field} />
+                  <Input placeholder="Email" autoComplete="email" {...field} />
                 </FormControl>
 
                 <FormMessage />
@@ -95,15 +98,15 @@ export default function ContactForm() {
               </FormItem>
             )}
           />
-          <ButtonFormSubmit
+          <Button
             type="submit"
             className="text-bases col-span-2 mt-3"
             variant={"default"}
             size={"lg"}
-            loading={pending}
+            disabled={pending}
           >
-            Send
-          </ButtonFormSubmit>
+            {pending ? "Sending..." : "Send Message"}
+          </Button>
         </div>
       </form>
     </Form>
