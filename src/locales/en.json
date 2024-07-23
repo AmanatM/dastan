@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Dastan Abikov",
-    "description": "Serial entrepreneur, investor, and philanthropist"
+    "description": "Entrepreneur, investor, speaker, activist, and diplomat. Dastan Abikov was born in 1999 in Bishkek, Kyrgyz Republic."
   },
   "Global": {
     "name": "Dastan Abikov",
@@ -18,7 +18,21 @@
     }
   },
   "News": {
-    "title": "News & Publications"
+    "title": "News & Publications",
+    "publications": {
+      "interviewYoutube": {
+        "title": "Interview with Dastan Abikov",
+        "description": "Dastan Abikov talks about his life, business, and future plans"
+      },
+      "neoplaceArticle": {
+        "title": "Neoplace: Discovering the Ultimate Nomadic Lifestyle",
+        "description": "Neoplace revolutionizes the modern-day nomadic lifestyle with innovative solutions."
+      },
+      "sputnikArticle": {
+        "title": "The 17-Year-Old Entrepreneur Who Earned $500 a Day",
+        "description": "The businessman was interviewed by Sputnik Kyrgyzstan correspondent Asel Minbaeva."
+      }
+    }
   },
   "notFound": {
     "title": "Page not found",
@@ -58,13 +72,11 @@
       },
       "7": {
         "time": "23 y.o.",
-        "description": "Graduated from the economic program at the Kyrgyz Economic University (KEU) and developed a socio-economic development program for the Kyrgyz Republic",
-        "link": "#"
+        "description": "Graduated from the economic program at the Kyrgyz Economic University (KEU) and developed a socio-economic development program for the Kyrgyz Republic"
       },
       "8": {
         "time": "2023",
-        "description": "Founded the Kyrgyz Fund. Scholarship programs operate under the fund's aegis",
-        "link": "#"
+        "description": "Founded the Kyrgyz Fund. Scholarship programs operate under the fund's aegis"
       },
       "9": {
         "time": "24 y.o.",

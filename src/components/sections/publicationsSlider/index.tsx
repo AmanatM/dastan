@@ -7,10 +7,18 @@ import { useTranslations } from "next-intl"
 export default function PublicationsSlider() {
   const t = useTranslations("News")
 
+  const publications = publications_data.map(publications => {
+    return {
+      ...publications,
+      title: t(`publications.${publications.key}.title`),
+      description: t(`publications.${publications.key}.description`),
+    }
+  })
+
   return (
     <div className="relative overflow-clip" id="news">
       <Section>
-        <Slider publications={publications_data}>
+        <Slider publications={publications}>
           <Heading className="self-stretch">
             <h4 className="uppercase">{t("title")}</h4>
           </Heading>

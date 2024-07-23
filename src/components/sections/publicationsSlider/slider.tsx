@@ -11,7 +11,17 @@ import { YoutubeIcon } from "@/icons/platform-icons"
 import useEmblaCarousel, { UseEmblaCarouselType } from "embla-carousel-react"
 import Link from "next/link"
 
-export function Slider({ publications, children }: { publications: PublicationItem[]; children: React.ReactNode }) {
+type PublicationItemProps = PublicationItem & {
+  title: string
+  description: string
+}
+export function Slider({
+  publications,
+  children,
+}: {
+  publications: PublicationItemProps[]
+  children: React.ReactNode
+}) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       align: "start",
@@ -125,7 +135,7 @@ export function Slider({ publications, children }: { publications: PublicationIt
   )
 }
 
-export function VainillaCard({ item }: { item: PublicationItem }) {
+export function VainillaCard({ item }: { item: PublicationItemProps }) {
   return (
     <Link
       href={item.link}
@@ -138,7 +148,7 @@ export function VainillaCard({ item }: { item: PublicationItem }) {
           <h3 className="text-text-primary dark:text-dark-text-primary text-pretty text-xl font-normal leading-[135%] sm:text-2xl md:text-3xl">
             {item.title}
           </h3>
-          <h5 className="text-base font-extralight md:text-lg">{item.subtitle}</h5>
+          <h5 className="text-base font-extralight md:text-lg">{item.description}</h5>
         </div>
         <div className="flex items-center gap-4 pl-5">
           <div className="dark:border-dark-border flex flex-1 items-center gap-5 border-r border-border py-2">
@@ -160,5 +170,5 @@ export function VainillaCard({ item }: { item: PublicationItem }) {
 export const TesimonialCard = React.memo(
   VainillaCard,
   (prevProps, nextProps) =>
-    prevProps.item.title === nextProps.item.title && prevProps.item.platform === nextProps.item.platform,
+    prevProps.item.key === nextProps.item.key && prevProps.item.platform === nextProps.item.platform,
 )
