@@ -12,6 +12,7 @@ export default function PublicationsSlider() {
       ...publications,
       title: t(`publications.${publications.key}.title`),
       description: t(`publications.${publications.key}.description`),
+      date: t(`publications.${publications.key}.date`),
     }
   })
 

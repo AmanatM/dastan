@@ -22,15 +22,18 @@
     "publications": {
       "interviewYoutube": {
         "title": "Interview with Dastan Abikov",
-        "description": "Dastan Abikov talks about his life, business, and future plans"
+        "description": "Dastan Abikov talks about his life, business, and future plans",
+        "date": "Jun, 2017"
       },
       "neoplaceArticle": {
         "title": "Neoplace: Discovering the Ultimate Nomadic Lifestyle",
-        "description": "Neoplace revolutionizes the modern-day nomadic lifestyle with innovative solutions."
+        "description": "Neoplace revolutionizes the modern-day nomadic lifestyle with innovative solutions.",
+        "date": "April, 2024"
       },
       "sputnikArticle": {
         "title": "The 17-Year-Old Entrepreneur Who Earned $500 a Day",
-        "description": "The businessman was interviewed by Sputnik Kyrgyzstan correspondent Asel Minbaeva."
+        "description": "The businessman was interviewed by Sputnik Kyrgyzstan correspondent Asel Minbaeva.",
+        "date": "Dec, 2016"
       }
     }
   },
@@ -42,10 +45,6 @@
     "subtitle": "Biography",
     "title": "WAS BORN IN 1999 IN KYRGYZ REPUBLIC",
     "shortFacts": {
-      "0": {
-        "time": "1999",
-        "description": "Dastan Abikov was born in Bishkek, Kyrgyzstan"
-      },
       "1": {
         "time": "15 y.o.",
         "description": "Started engaging in entrepreneurship"

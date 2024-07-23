@@ -9,6 +9,8 @@ import { cn } from "@/lib/utils"
 import heroImage from "@public/images/hero/un.jpg"
 import heroImage2 from "@public/images/hero/hero-un.jpeg"
 import heroImage3 from "@public/images/hero/hero-min.webp"
+import heroImage4 from "@public/images/hero/hero-suit.jpeg"
+import harvard from "@public/images/hero/harvard.jpeg"
 
 const sliderImages = [
   {
@@ -21,6 +23,10 @@ const sliderImages = [
   },
   {
     src: heroImage3,
+    alt: "Hero image",
+  },
+  {
+    src: heroImage4,
     alt: "Hero image",
   },
 ]

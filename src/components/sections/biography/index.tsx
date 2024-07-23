@@ -14,7 +14,7 @@ type ShortFactKeys = `Biography.shortFacts.${number}.${"time" | "description"}`
 export default function Biography() {
   const t = useTranslations()
 
-  const shortFacts = [0, 1, 2, 3, 4, 5] as const
+  const shortFacts = [1, 2, 3, 4, 5] as const
   const secondPart = [6, 7, 8, 9, 10] as const
 
   return (
