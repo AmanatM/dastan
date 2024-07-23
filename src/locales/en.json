@@ -10,11 +10,11 @@
   },
   "Hero": {
     "description": {
-      "0": "Serial entrepreneur",
+      "0": "Entrepreneur",
       "1": "Investor",
       "2": "Speaker",
-      "3": "Diplomat",
-      "4": "Philanthropist"
+      "3": "Activist",
+      "4": "Diplomat"
     }
   },
   "News": {
@@ -96,6 +96,17 @@
   },
   "Footer": {
     "rightsReserved": "All rights reserved."
+  },
+  "Contact": {
+    "tag": "Contact Me",
+    "title": "GET IN TOUCH WITH ME",
+    "role": "Entrepreneur | Activist",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message"
+    }
   },
   "Navigation": {
     "nav_items": {

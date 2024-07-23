@@ -19,7 +19,7 @@ const formSchema = z.object({
   access_key: z.string(),
 })
 
-export default function ContactForm() {
+export default function ContactForm({ formText }: { formText: Record<string, string> }) {
   const [pending, setPending] = useState(false)
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -65,7 +65,7 @@ export default function ContactForm() {
             render={({ field }) => (
               <FormItem className="col-span-2 md:col-span-1">
                 <FormControl>
-                  <Input placeholder="Name" autoComplete="name" {...field} />
+                  <Input placeholder={formText.name} autoComplete="name" {...field} />
                 </FormControl>
 
                 <FormMessage />
@@ -78,7 +78,7 @@ export default function ContactForm() {
             render={({ field }) => (
               <FormItem className="col-span-2 md:col-span-1">
                 <FormControl>
-                  <Input placeholder="Email" autoComplete="email" {...field} />
+                  <Input placeholder={formText.email} autoComplete="email" {...field} />
                 </FormControl>
 
                 <FormMessage />
@@ -91,7 +91,7 @@ export default function ContactForm() {
             render={({ field }) => (
               <FormItem className="col-span-2 text-base">
                 <FormControl>
-                  <Textarea placeholder="Message" className="min-h-[150px] resize-none" {...field} />
+                  <Textarea placeholder={formText.message} className="min-h-[150px] resize-none" {...field} />
                 </FormControl>
 
                 <FormMessage />
@@ -105,7 +105,7 @@ export default function ContactForm() {
             size={"lg"}
             disabled={pending}
           >
-            {pending ? "Sending..." : "Send Message"}
+            {pending ? "..." : formText.submit}
           </Button>
         </div>
       </form>
