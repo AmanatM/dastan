@@ -13,16 +13,11 @@ export default function Home({ params: { locale } }: { params: { locale: string 
   return (
     <div>
       <Hero />
-      <Companies />
       <Biography />
-      <FeaturesList />
-      <PublicationsSlider
-        heading={{
-          title: "NEWS & PUBLICATIONS",
-          subtitle: undefined,
-          align: "center",
-        }}
-      />
+      <Companies />
+
+      {/* <FeaturesList /> */}
+      <PublicationsSlider />
       <ContactForm />
       {/* <Newsletter /> */}
     </div>
