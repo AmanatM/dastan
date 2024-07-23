@@ -6,6 +6,7 @@ import { Heading } from "@/components/common/heading"
 import { ChatBubbleIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons"
 import ContactForm from "./_components/contactForm"
 import { useTranslations } from "next-intl"
+import Link from "next/link"
 
 export default function ContactSection() {
   const t = useTranslations()
@@ -24,12 +25,12 @@ export default function ContactSection() {
           <h4 className="uppercase">{t("Contact.title")}</h4>
         </Heading>
         <div className="space-y-4">
-          <div className="flex items-center gap-x-2">
+          <Link className="flex items-center gap-x-2" href={"mailto:dastanabik@icloud.com"}>
             <EnvelopeClosedIcon className="h-5 w-5" /> <span>dastanabik@icloud.com</span>
-          </div>
-          <div className="flex items-center gap-x-2">
+          </Link>
+          <Link className="flex items-center gap-x-2" href={"tel:+1 (628) 264-4246"}>
             <ChatBubbleIcon className="h-5 w-5" /> <span>+1 (628) 264-4246</span>
-          </div>
+          </Link>
         </div>
 
         <blockquote className="relative">

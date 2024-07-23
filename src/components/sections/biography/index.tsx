@@ -7,15 +7,19 @@ import { useTranslations } from "next-intl"
 import slider1 from "@public/images/biography/childhood.jpg"
 import slider2 from "@public/images/biography/childhood-2.jpeg"
 
-import slider3 from "@public/images/biography/certificate.jpg"
-import slider4 from "@public/images/biography/professor.jpeg"
+import { Button } from "@/components/ui/button"
+import ReadMore from "./_components/ReadMore"
+import { Dialog, DialogTrigger } from "@/components/ui/dialog"
 
-type ShortFactKeys = `Biography.shortFacts.${number}.${"time" | "description"}`
 export default function Biography() {
   const t = useTranslations()
 
-  const shortFacts = [1, 2, 3, 4, 5] as const
-  const secondPart = [6, 7, 8, 9, 10] as const
+  const shortFacts = [
+    t("Biography.shortFacts.0"),
+    t("Biography.shortFacts.1"),
+    t("Biography.shortFacts.2"),
+    t("Biography.shortFacts.3"),
+  ]
 
   return (
     <Section container={"default"} id="biography" className="gap-y-14">
@@ -45,42 +49,19 @@ export default function Biography() {
             {shortFacts.map((fact, index) => (
               <div key={index} className="flex items-start gap-x-2">
                 <div className="mt-2 !h-[8px] !w-[8px] shrink-0 bg-accent" />
-                <div>
-                  <span className="font-bold">{t(`Biography.shortFacts.${fact}.time`)} </span>
-                  {t(`Biography.shortFacts.${fact}.description`)}
-                </div>
+                <div>{fact}</div>
               </div>
             ))}
           </div>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button size={"lg"} className="self-start text-lg">
+                {t("Global.readMore")}
+              </Button>
+            </DialogTrigger>
+            <ReadMore />
+          </Dialog>
         </div>
-      </div>
-      <div className="relative grid w-full flex-col items-center gap-10 gap-x-20 md:grid-cols-2">
-        <div className="order-1 flex flex-col gap-y-7 md:order-first">
-          <div className="flex flex-col gap-y-3">
-            {secondPart.map((fact, index) => (
-              <div key={index} className="flex items-start gap-x-2">
-                <div className="mt-2 !h-[8px] !w-[8px] shrink-0 bg-accent" />
-                <div>
-                  <span className="font-bold">{t(`Biography.shortFacts.${fact}.time`)} </span>
-                  {t(`Biography.shortFacts.${fact}.description`)}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <ImageCarousel
-          className="h-[300px] md:h-[500px]"
-          images={[
-            {
-              img: slider3,
-              alt: "",
-            },
-            {
-              img: slider4,
-              alt: "",
-            },
-          ]}
-        />
       </div>
     </Section>
   )

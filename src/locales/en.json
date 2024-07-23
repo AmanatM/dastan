@@ -45,52 +45,44 @@
     "subtitle": "Biography",
     "title": "WAS BORN IN 1999 IN KYRGYZ REPUBLIC",
     "shortFacts": {
+      "0": "At the age of 15, he started engaging in entrepreneurship",
+      "1": "At the age of 21, he earned his first million dollars",
+      "2": "At the age of 23, he developed a socio-economic development program for the Kyrgyz Republic",
+      "3": "At the age of 24, he spoke at a commission meeting at the United Nations (UN)"
+    },
+    "readMore": {
+      "0": {
+        "time": "1999",
+        "description": "Dastan Abikov was born in Bishkek, Kyrgyzstan."
+      },
       "1": {
         "time": "15 y.o.",
-        "description": "Started engaging in entrepreneurship"
+        "description": "Started engaging in entrepreneurship."
       },
       "2": {
         "time": "17 y.o.",
-        "description": "Was recognized by the Massachusetts Institute of Technology as one of the most promising young entrepreneurs and received support from the Prime Minister of the Kyrgyz Republic"
+        "description": "Founded a successful contracting company in the construction industry. Was recognized by the Massachusetts Institute of Technology as one of the most promising young entrepreneurs. Received support from the Prime Minister of the Kyrgyz Republic."
       },
       "3": {
-        "time": "2017",
-        "description": "Founded a successful contracting company in the construction industry"
+        "time": "18 y.o.",
+        "description": "Graduated from Tursun Temirova School in Kochkor District, Naryn Region."
       },
       "4": {
-        "time": "18 y.o.",
-        "description": "Graduated from Tursun Temirova School in Kochkor District, Naryn Region"
+        "time": "21 y.o.",
+        "description": "Earned his first million dollars. Started sponsoring the Kyrgyzstan Jiu-Jitsu Sports Federation. Started sponsoring the cultural project 'Ilgeri'. Became a member of the U.S. Chamber of Commerce."
       },
       "5": {
-        "time": "21 y.o.",
-        "description": "Earned his first million dollars"
+        "time": "22 y.o.",
+        "description": "Completed a professional education program at Harvard Business School (HBS). Became a member of the Harvard Business School community. Developed a socio-economic development program for the Kyrgyz Republic. [Link to the program]"
       },
       "6": {
-        "time": "22 y.o.",
-        "description": "Completed a professional education program at Harvard Business School (HBS)"
+        "time": "23 y.o.",
+        "description": "Graduated from the economic program at the Kyrgyz Economic University (KEU). Founded the Kyrgyz Fund. Scholarship programs operate under the fund's aegis. [Link to the fund and scholarship application]"
       },
       "7": {
-        "time": "23 y.o.",
-        "description": "Graduated from the economic program at the Kyrgyz Economic University (KEU) and developed a socio-economic development program for the Kyrgyz Republic"
-      },
-      "8": {
-        "time": "2023",
-        "description": "Founded the Kyrgyz Fund. Scholarship programs operate under the fund's aegis"
-      },
-      "9": {
         "time": "24 y.o.",
-        "description": "Founded the 'Sustainable Mountain Development Fund' (SMDF) in New York and became a member of the Mountain Partnership at the United Nations (UN)"
-      },
-      "10": {
-        "time": "2024",
-        "description": "Spoke at a commission meeting at the United Nations (UN)"
+        "description": "Founded the 'Sustainable Mountain Development Fund' (SMDF) in New York. Became a member of the Mountain Partnership at the United Nations (UN). Spoke at a commission meeting at the United Nations (UN)."
       }
-    },
-    "readMore": {
-      "paragraph1": "Dastan Abikov was born in 1999 in Bishkek. At 15, he began his entrepreneurial journey. By 17, he was recognized by the Massachusetts Institute of Technology as a promising young entrepreneur and received support from the Kyrgyz Republic's Prime Minister. In 2017, he founded a successful contracting company and graduated high school at 18.",
-      "paragraph2": "At 21, Dastan earned his first million dollars. Since 2020, he has funded the Jiu-Jitsu Federation of Kyrgyzstan, with an athlete winning the under-19 world championship in 2021. He also supports the cultural project “Ilgeri,” which represented Kyrgyzstan at the Venice Biennale and organizes the Museum of Contemporary Art in Bishkek.",
-      "paragraph3": "At 22, Dastan completed a professional education program at Harvard Business School. At 23, he finished an economics program at the Kyrgyz Economic University and wrote a socio-economic development program for the Kyrgyz Republic. He founded the Kyrgyz Fund, which offers scholarship programs.",
-      "paragraph4": "At 24, he joined the Mountain Partnership at the United Nations and, in 2024, spoke at a UN commission meeting."
     }
   },
   "Footer": {
