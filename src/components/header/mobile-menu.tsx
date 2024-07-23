@@ -5,6 +5,7 @@ import {
   SheetClose,
   SheetContent,
   SheetDescription,
+  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -16,6 +17,7 @@ import LocaleSelector from "./locale-selector"
 import { Separator } from "../ui/separator"
 import { Cross1Icon, ExternalLinkIcon, HamburgerMenuIcon } from "@radix-ui/react-icons"
 import { Link } from "@/navigation"
+import SocialIcons from "./social-icons"
 
 export function MobileMenu({ navigationItems, navMeta }: any) {
   const [navOpened, setNavOpened] = useState(false)
@@ -84,6 +86,9 @@ export function MobileMenu({ navigationItems, navMeta }: any) {
             <ExternalLinkIcon className="ml-1 h-4 w-4" />
           </Link>
         </div>
+        <SheetFooter className="mt-6 !justify-start px-2">
+          <SocialIcons />
+        </SheetFooter>
       </SheetContent>
     </Sheet>
   )
