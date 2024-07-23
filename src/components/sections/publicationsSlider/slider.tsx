@@ -14,6 +14,7 @@ import Link from "next/link"
 type PublicationItemProps = PublicationItem & {
   title: string
   description: string
+  date: string
 }
 export function Slider({
   publications,
