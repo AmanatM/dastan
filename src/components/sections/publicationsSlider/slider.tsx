@@ -141,7 +141,7 @@ export function VainillaCard({ item }: { item: PublicationItemProps }) {
       href={item.link}
       target="_blank"
       prefetch={false}
-      className="min-w-0 max-w-full shrink-0 grow-0 basis-[min(540px,80%)] self-stretch md:pr-10"
+      className="min-w-0 max-w-full shrink-0 grow-0 basis-[min(540px,90%)] self-stretch md:pr-10"
     >
       <article className="embla__slide dark:border-dark-border flex h-full w-full min-w-0 transform touch-pan-y touch-pinch-zoom select-none flex-col rounded-xl border border-border [backface-visibility:hidden] last:!visible">
         <div className="dark:border-dark-border flex flex-1 flex-col items-start gap-y-3 border-b border-border px-5 py-[18px] md:px-8 md:py-7">

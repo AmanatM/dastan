@@ -18,8 +18,8 @@ export default function Biography() {
   const secondPart = [6, 7, 8, 9, 10] as const
 
   return (
-    <Section container={"default"} id="biography" className="gap-y-1">
-      <div className="relative grid w-full flex-col items-center gap-10 gap-x-20 py-14 md:grid-cols-2 md:py-[72px]">
+    <Section container={"default"} id="biography" className="gap-y-14">
+      <div className="relative grid w-full flex-col items-center gap-10 gap-x-20 py-0 md:grid-cols-2">
         <ImageCarousel
           className="h-[300px] md:h-[500px]"
           images={[
@@ -54,7 +54,7 @@ export default function Biography() {
           </div>
         </div>
       </div>
-      <div className="relative grid w-full flex-col items-center gap-10 gap-x-20 py-14 md:grid-cols-2 md:py-[72px]">
+      <div className="relative grid w-full flex-col items-center gap-10 gap-x-20 md:grid-cols-2">
         <div className="order-1 flex flex-col gap-y-7 md:order-first">
           <div className="flex flex-col gap-y-3">
             {secondPart.map((fact, index) => (

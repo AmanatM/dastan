@@ -19,7 +19,7 @@ const ImageSliderBackground = ({ images, options }: PropType) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3000 }), Fade()])
 
   return (
-    <div className="h-4/5 w-full select-none overflow-hidden md:h-full" ref={emblaRef}>
+    <div className="h-2/3 w-full select-none overflow-hidden md:h-full" ref={emblaRef}>
       <div className="relative flex h-full w-full">
         {images.map((image, index) => (
           <div key={index} className="relative w-full flex-shrink-0 flex-grow-0">
