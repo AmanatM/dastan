@@ -13,10 +13,6 @@ export const mainNav: MainNav[] = [
     href: "#kyrgyzFund",
   },
   {
-    titleKey: "scholarshipProgramm",
-    href: "#scholarshipProgram",
-  },
-  {
     titleKey: "economicProgram",
     href: "#economicProgram",
   },

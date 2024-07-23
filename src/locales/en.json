@@ -86,6 +86,16 @@
       }
     }
   },
+  "KyrgyzFund": {
+    "title": "Kyrgyz Fund",
+    "description": "Our fund is aimed at developing human potential. We believe that a successful generation will create a strong economy and a prosperous country. Apply for the scholarship program",
+    "button": "Apply"
+  },
+  "EconomicProgram": {
+    "title": "Economic Development Program",
+    "description": "Dastan Abikov’s vision for achieving an economic breakthrough in the Kyrgyz Republic",
+    "button": "Learn More"
+  },
   "Footer": {
     "rightsReserved": "All rights reserved."
   },
@@ -97,7 +107,13 @@
       "name": "Name",
       "email": "Email",
       "message": "Message",
-      "send": "Send Message"
+      "send": "Send Message",
+      "success": "Your message has been sent successfully",
+      "error": "An error occurred while sending the message",
+      "validation": {
+        "name": "Please enter your name",
+        "email": "Please enter a valid email address"
+      }
     }
   },
   "Navigation": {
