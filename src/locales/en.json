@@ -54,35 +54,35 @@
     "readMore": {
       "0": {
         "time": "1999",
-        "description": "Dastan Abikov was born in Bishkek, Kyrgyzstan."
+        "description": "<li>Dastan Abikov was born in Bishkek, Kyrgyzstan</li>"
       },
       "1": {
         "time": "15 y.o.",
-        "description": "Started engaging in entrepreneurship."
+        "description": "<li>Started engaging in entrepreneurship</li>"
       },
       "2": {
         "time": "17 y.o.",
-        "description": "Founded a successful contracting company in the construction industry. Was recognized by the Massachusetts Institute of Technology as one of the most promising young entrepreneurs. Received support from the Prime Minister of the Kyrgyz Republic."
+        "description": "<li>Founded a successful contracting company in the construction industry.</li><li> Was recognized by the Massachusetts Institute of Technology as one of the most promising young entrepreneurs</li><li> Received support from the Prime Minister of the Kyrgyz Republic</li>"
       },
       "3": {
         "time": "18 y.o.",
-        "description": "Graduated from Tursun Temirova School in Kochkor District, Naryn Region."
+        "description": "<li>Graduated from Tursun Temirova School in Kochkor District, Naryn Region</li>"
       },
       "4": {
         "time": "21 y.o.",
-        "description": "Earned his first million dollars. Started sponsoring the Kyrgyzstan Jiu-Jitsu Sports Federation. Started sponsoring the cultural project 'Ilgeri'. Became a member of the U.S. Chamber of Commerce."
+        "description": "<li>Earned his first million dollars</li><li>Started sponsoring the Kyrgyzstan Jiu-Jitsu Sports Federation</li><li>Started sponsoring the cultural project Ilgeri</li>"
       },
       "5": {
         "time": "22 y.o.",
-        "description": "Completed a professional education program at Harvard Business School (HBS). Became a member of the Harvard Business School community. Developed a socio-economic development program for the Kyrgyz Republic. [Link to the program]"
+        "description": "<li>Completed a professional education program at Harvard Business School (HBS)</li> <li>Became a member of the Harvard Business School community</li><li> Developed a socio-economic development program for the Kyrgyz Republic</li>"
       },
       "6": {
         "time": "23 y.o.",
-        "description": "Graduated from the economic program at the Kyrgyz Economic University (KEU). Founded the Kyrgyz Fund. Scholarship programs operate under the fund's aegis. [Link to the fund and scholarship application]"
+        "description": "<li>Graduated from the economic program at the Kyrgyz Economic University (KEU)</li><li> Founded the Kyrgyz Fund. Scholarship programs operate under the fund's aegis </li>"
       },
       "7": {
         "time": "24 y.o.",
-        "description": "Founded the 'Sustainable Mountain Development Fund' (SMDF) in New York. Became a member of the Mountain Partnership at the United Nations (UN). Spoke at a commission meeting at the United Nations (UN)."
+        "description": "<li>Founded the 'Sustainable Mountain Development Fund' (SMDF) in New York</li> <li>Became a member of the Mountain Partnership at the United Nations (UN)</li><li> Spoke at a commission meeting at the United Nations (UN)</li>"
       }
     }
   },

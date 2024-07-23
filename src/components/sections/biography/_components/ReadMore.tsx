@@ -13,9 +13,19 @@ import { useMessages, useTranslations } from "next-intl"
 
 function ReadMore() {
   const t = useTranslations()
-
   const messages = useMessages() as IntlMessages
-  const keys = Object.keys(messages.Biography.readMore)
+
+  const keys = Object.keys(messages.Biography.readMore) as Array<keyof typeof messages.Biography.readMore>
+
+  const readMoreItems = keys.map(key => {
+    return {
+      key,
+      time: t(`Biography.readMore.${key}.time`),
+      description: t.rich(`Biography.readMore.${key}.description`, {
+        li: chunks => <li>{chunks}</li>,
+      }),
+    }
+  })
 
   return (
     <DialogContent className="max-w-2xl">
@@ -24,16 +34,12 @@ function ReadMore() {
         <DialogDescription className="hidden">{t("Biography.subtitle")}</DialogDescription>
       </DialogHeader>
       <ScrollArea className="h-[400px] overflow-auto">
-        {keys.map(key => (
-          <div key={key} className="my-2 flex items-start gap-x-2">
+        {readMoreItems.map(item => (
+          <div key={item.key} className="my-4 flex items-start gap-x-2">
             <div className="mt-2 !h-[8px] !w-[8px] shrink-0 bg-accent" />
-            <div className="w-[90px] whitespace-nowrap text-nowrap font-bold">
-              {t(`Biography.readMore.${key as "0" | "1"}.time`)}:
-            </div>
+            <div className="w-[90px] whitespace-nowrap text-nowrap font-bold">{item.time}:</div>
 
-            <div className="flex flex-1 flex-col gap-y-1">
-              <p>{t(`Biography.readMore.${key as "0" | "1"}.description`)}</p>
-            </div>
+            <ul className="flex flex-1 list-disc flex-col gap-y-1">{item.description}</ul>
           </div>
         ))}
 
