@@ -1,18 +1,18 @@
-"use client";
-import React from "react";
-import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
-import Image, { StaticImageData } from "next/image";
-import { cn } from "@/lib/utils";
+"use client"
+import React from "react"
+import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
+import Image, { StaticImageData } from "next/image"
+import { cn } from "@/lib/utils"
 
 type ImageCarouselProps = {
   images: {
-    img: StaticImageData;
-    alt: string;
-  }[];
-  delay?: number;
-  className?: string;
-};
+    img: StaticImageData
+    alt: string
+  }[]
+  delay?: number
+  className?: string
+}
 
 function ImageCarousel({ images, delay = 3000, className }: ImageCarouselProps) {
   return (
@@ -46,7 +46,7 @@ function ImageCarousel({ images, delay = 3000, className }: ImageCarouselProps) 
         ))}
       </CarouselContent>
     </Carousel>
-  );
+  )
 }
 
-export default ImageCarousel;
+export default ImageCarousel

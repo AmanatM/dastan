@@ -5,7 +5,10 @@ import ImageCarousel from "@/components/ImageCarousel"
 import { useTranslations } from "next-intl"
 
 import slider1 from "@public/images/biography/childhood.jpg"
-import slider2 from "@public/images/biography/certificate.jpg"
+import slider2 from "@public/images/biography/childhood-2.jpeg"
+
+import slider3 from "@public/images/biography/certificate.jpg"
+import slider4 from "@public/images/biography/professor.jpeg"
 
 type ShortFactKeys = `Biography.shortFacts.${number}.${"time" | "description"}`
 export default function Biography() {
@@ -18,7 +21,7 @@ export default function Biography() {
     <Section container={"default"} id="biography" className="gap-y-1">
       <div className="relative grid w-full flex-col items-center gap-10 gap-x-20 py-14 md:grid-cols-2 md:py-[72px]">
         <ImageCarousel
-          className="h-[500px]"
+          className="h-[300px] md:h-[500px]"
           images={[
             {
               img: slider1,
@@ -52,7 +55,7 @@ export default function Biography() {
         </div>
       </div>
       <div className="relative grid w-full flex-col items-center gap-10 gap-x-20 py-14 md:grid-cols-2 md:py-[72px]">
-        <div className="flex flex-col gap-y-7">
+        <div className="order-1 flex flex-col gap-y-7 md:order-first">
           <div className="flex flex-col gap-y-3">
             {secondPart.map((fact, index) => (
               <div key={index} className="flex items-start gap-x-2">
@@ -66,14 +69,14 @@ export default function Biography() {
           </div>
         </div>
         <ImageCarousel
-          className="h-[500px]"
+          className="h-[300px] md:h-[500px]"
           images={[
             {
-              img: slider2,
+              img: slider3,
               alt: "",
             },
             {
-              img: slider1,
+              img: slider4,
               alt: "",
             },
           ]}
