@@ -7,6 +7,7 @@ import { ChatBubbleIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons"
 import ContactForm from "./_components/contactForm"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
+import { LogoIcon } from "@/icons/logo-icons"
 
 export default function ContactSection() {
   const t = useTranslations()
@@ -46,6 +47,9 @@ export default function ContactSection() {
             </div>
           </div>
         </blockquote>
+        <Link aria-label="Homepage" href="/" className="place-self-start">
+          <LogoIcon />
+        </Link>
       </div>
 
       <div className="flex flex-col gap-y-7">

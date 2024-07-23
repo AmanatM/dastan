@@ -16,7 +16,7 @@ export default function Home({ params: { locale } }: { params: { locale: string 
       <Biography />
       <Companies />
 
-      {/* <FeaturesList /> */}
+      <FeaturesList />
       <PublicationsSlider />
       <ContactForm />
       {/* <Newsletter /> */}

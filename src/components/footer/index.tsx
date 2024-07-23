@@ -9,12 +9,12 @@ export function Footer() {
   const navigationItems = mainNav.map(item => t(`Navigation.nav_items.${item.titleKey}`))
 
   return (
-    <footer className="border-t border-border py-16 text-muted-foreground">
-      <div className="container mx-auto grid grid-flow-row place-items-start items-center gap-y-7 px-6">
-        <Link aria-label="Homepage" href="/" className="place-self-center">
+    <footer className="border-t border-border py-10 text-muted-foreground">
+      <div className="container mx-auto grid grid-flow-row place-items-start items-center gap-y-2 px-6">
+        {/* <Link aria-label="Homepage" href="/" className="place-self-start">
           <LogoIcon />
-        </Link>
-        <nav className="flex flex-col gap-x-2 gap-y-3 self-center sm:flex-row sm:items-center sm:place-self-center md:gap-x-4 lg:gap-x-8">
+        </Link> */}
+        {/* <nav className="flex flex-col gap-x-2 gap-y-3 self-center sm:flex-row sm:items-center sm:place-self-center md:gap-x-4 lg:gap-x-8">
           {mainNav.map((link, index) => (
             <Link
               key={link.titleKey}
@@ -24,11 +24,11 @@ export function Footer() {
               {navigationItems[index]}
             </Link>
           ))}
-        </nav>
+        </nav> */}
+        <p className="text-text-tertiary dark:text-dark-text-tertiary text-pretty text-center text-sm">
+          {t("Global.name")} · © 2024
+        </p>
       </div>
-      <p className="text-text-tertiary dark:text-dark-text-tertiary mt-20 text-pretty text-center text-sm">
-        {t("Global.name")} © 2024 . {t("Footer.rightsReserved")}
-      </p>
     </footer>
   )
 }

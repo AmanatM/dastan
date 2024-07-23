@@ -28,11 +28,11 @@ function ReadMore() {
           <div key={key} className="my-2 flex items-start gap-x-2">
             <div className="mt-2 !h-[8px] !w-[8px] shrink-0 bg-accent" />
             <div className="w-[90px] whitespace-nowrap text-nowrap font-bold">
-              {t(`Biography.readMore.${key}.time`)}:
+              {t(`Biography.readMore.${key}.time` as string)}:
             </div>
 
             <div className="flex flex-1 flex-col gap-y-1">
-              <p>{t(`Biography.readMore.${key}.description`)}</p>
+              <p>{t(`Biography.readMore.${key}.description` as string)}</p>
             </div>
           </div>
         ))}

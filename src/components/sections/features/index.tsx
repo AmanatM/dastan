@@ -8,8 +8,9 @@ import { ReadMoreFund } from "./_components/readMore_Fund"
 import { Dialog, DialogTrigger } from "@/components/ui/dialog"
 
 import un_image from "@public/images/hero/un.jpg"
-import professor_image from "@public/images/professor.jpeg"
+import professor_image from "@public/images/economic.jpg"
 import economy_image from "@public/images/economic.jpg"
+import { ExternalLinkIcon, Link1Icon } from "@radix-ui/react-icons"
 
 const featuresCardsList = [
   {
@@ -21,16 +22,6 @@ const featuresCardsList = [
     content:
       "A program for young entrepreneurs who want to start their own business. We provide you with the tools and resources you need to succeed.",
     link: "kyrgyzFund",
-  },
-  {
-    image: {
-      src: un_image,
-      alt: "Scholarship program",
-    },
-    title: "Scholarship Program",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    link: "scholarshipProgram",
   },
   {
     image: {
@@ -50,7 +41,7 @@ export default function FeaturesList() {
   return (
     <Section container="default">
       <div className="flex flex-col gap-6">
-        {featuresCardsList.map(card => (
+        {featuresCardsList.map((card, index) => (
           <div
             key={card.title}
             id={card.link}
@@ -74,14 +65,20 @@ export default function FeaturesList() {
                   {card.content}
                 </p>
               </div>
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button size={"lg"} className="self-start text-lg">
-                    {t("Global.readMore")}
-                  </Button>
-                </DialogTrigger>
-                <ReadMoreFund />
-              </Dialog>
+              {index === 0 ? (
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button size={"lg"} className="self-start text-lg">
+                      {t("Global.readMore")}
+                    </Button>
+                  </DialogTrigger>
+                  <ReadMoreFund />
+                </Dialog>
+              ) : (
+                <Button size={"lg"} className="flex gap-x-2 self-start text-lg">
+                  {t("Global.readMore")} <ExternalLinkIcon />
+                </Button>
+              )}
             </div>
           </div>
         ))}
