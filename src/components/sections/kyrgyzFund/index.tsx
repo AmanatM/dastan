@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl"
 import economy_image from "@public/images/hero/hero-un.jpeg"
 import { ButtonLink } from "@/components/ui/button-link"
 import { Pencil2Icon } from "@radix-ui/react-icons"
+import { GlobeDemo } from "../economicProgram/_components/GlobeDemo"
 
 export default function KyrgyzFundSection() {
   const t = useTranslations("KyrgyzFund")
