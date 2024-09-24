@@ -19,7 +19,6 @@ export default function Biography() {
     t("Biography.shortFacts.1"),
     t("Biography.shortFacts.2"),
     t("Biography.shortFacts.3"),
-    t("Biography.shortFacts.4"),
   ]
 
   return (

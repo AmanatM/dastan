@@ -43,52 +43,51 @@
   },
   "Biography": {
     "subtitle": "Biography",
-    "title": "WAS BORN IN 1999 IN KYRGYZ REPUBLIC",
+    "title": "I WAS BORN IN 1999 IN BISHKEK, KYRGYZ REPUBLIC. I STUDIED AT THE KYRGYZ ECONOMIC UNIVERSITY AND HARVARD BUSINESS SCHOOL",
     "shortFacts": {
-      "0": "At the age of 15, he started engaging in entrepreneurship",
-      "1": "At the age of 21, he earned his first million dollars",
-      "2": "At the age of 23, he developed a socio-economic development program for the Kyrgyz Republic",
-      "3": "At the age of 24, he spoke at a commission meeting at the United Nations (UN)",
-      "4": "He received an education at the Kyrgyz Economic University and Harvard Business School"
+      "0": "At 15 I began my entrepreneurial journey.",
+      "1": "At 21 I earned my first million dollars.",
+      "2": "At 23 I developed a socio-economic development program for the Kyrgyz Republic.",
+      "3": "At 24 I spoke at a commission meeting at the United Nations. "
     },
     "readMore": {
       "0": {
         "time": "1999",
-        "description": "<li>Dastan Abikov was born in Bishkek, Kyrgyzstan</li>"
+        "description": "<li>Was born in Bishkek, Kyrgyzstan</li>"
       },
       "1": {
         "time": "15 y.o.",
-        "description": "<li>Started engaging in entrepreneurship</li>"
+        "description": "<li>Started entrepreneurial career</li>"
       },
       "2": {
         "time": "17 y.o.",
-        "description": "<li>Founded a successful contracting company in the construction industry.</li><li> Was recognized by the Massachusetts Institute of Technology as one of the most promising young entrepreneurs</li><li> Received support from the Prime Minister of the Kyrgyz Republic</li>"
+        "description": "<li>Founded a successful company in construction industry</li><li>Recognized by MIT as one of the most promising young entrepreneurs</li><li>Received support from the Prime Minister of Kyrgyz Republic</li>"
       },
       "3": {
         "time": "18 y.o.",
-        "description": "<li>Graduated from Tursun Temirova School in Kochkor District, Naryn Region</li>"
+        "description": "<li>Graduated from Tursun Temirova’s School in Kochkor city, Naryn region</li>"
       },
       "4": {
         "time": "21 y.o.",
-        "description": "<li>Earned his first million dollars</li><li>Started sponsoring the Kyrgyzstan Jiu-Jitsu Sports Federation</li><li>Started sponsoring the cultural project Ilgeri</li>"
+        "description": "<li>Earned first million dollars</li><li>Became a sponsor of the Jiu-Jitsu Federation of Kyrgyzstan</li><li>Sponsored the cultural project - Ilgeri</li><li>Joined the U.S. Chamber of Commerce</li>"
       },
       "5": {
         "time": "22 y.o.",
-        "description": "<li>Completed a professional education program at Harvard Business School (HBS)</li> <li>Became a member of the Harvard Business School community</li><li> Developed a socio-economic development program for the Kyrgyz Republic</li>"
+        "description": "<li>Completed a professional education program at Harvard Business School</li> <li>Became a member of the Harvard Business School community</li><li> Developed a socio-economic development program for the Kyrgyz Republic</li>"
       },
       "6": {
         "time": "23 y.o.",
-        "description": "<li>Graduated from the economic program at the Kyrgyz Economic University (KEU)</li><li> Founded the Kyrgyz Fund. Scholarship programs operate under the fund's aegis </li>"
+        "description": "<li>Graduated from the economic program at the Kyrgyz Economic University</li><li>Founded the Kyrgyz Foundation, which runs scholarship programs</li>"
       },
       "7": {
         "time": "24 y.o.",
-        "description": "<li>Founded the 'Sustainable Mountain Development Fund' (SMDF) in New York</li> <li>Became a member of the Mountain Partnership at the United Nations (UN)</li><li> Spoke at a commission meeting at the United Nations (UN)</li>"
+        "description": "<li>Established the Sustainable Mountain Development Foundation in New York</li> <li>Joined the Mountain Partnership at the United Nations</li><li>Spoke at a commission meeting at the United Nations</li>"
       }
     }
   },
   "KyrgyzFund": {
-    "title": "Kyrgyz Fund",
-    "description": "Our fund is aimed at developing human potential. We believe that a successful generation will create a strong economy and a prosperous country. Apply for the scholarship program",
+    "title": "Kyrgyz Foundation",
+    "description": "Our foundation aims to develop human potential. We believe, that successful generation will create a strong economy and a prosperous country. Apply for the scholarship program.",
     "button": "Apply"
   },
   "EconomicProgram": {
